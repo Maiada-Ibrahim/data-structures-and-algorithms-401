@@ -5,3 +5,4 @@ Write a function called BinarySearch which takes in 2 parameters: a sorted array
 ![](challenge3.png)
 
 ## Approach & Efficiency
+it take a hour I am became more familer with whitebord but need to take less time

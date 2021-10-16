@@ -4,11 +4,25 @@
 package challenge;
 
 public class App {
-    public String getGreeting() {
-        return "Hello World!";
-    }
+
 
     public static void main(String[] args) {
-        System.out.println(new App().getGreeting());
+
+    LinkedList<Integer> mylist = new LinkedList<>();
+        System.out.println(mylist.toString());
+        mylist.insert(1);
+        System.out.println(mylist.toString());
+//        mylist.insert(5);
+//        mylist.insert(6);
+        mylist.insert(10);
+        mylist.insert(8);
+        mylist.insert(9);
+        System.out.println(mylist.toString());
+       System.out.println(mylist.include(10));
+        System.out.println(mylist.include(3));
+
+
+
+
     }
 }

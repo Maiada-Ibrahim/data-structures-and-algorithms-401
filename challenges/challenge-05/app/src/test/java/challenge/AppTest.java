@@ -7,8 +7,44 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 
 class AppTest {
-    @Test void appHasAGreeting() {
-        App classUnderTest = new App();
-        assertNotNull(classUnderTest.getGreeting(), "app should have a greeting");
+    @Test void testemptylist() {
+       LinkedList<Integer> mylist =new LinkedList<>();
+        String correctresulte= mylist.toString();
+        assertEquals("Null", correctresulte);
+
     }
+    @Test void testinsertlist() {
+        LinkedList<Integer> mylist =new LinkedList<>();
+        mylist.insert(1);
+        String testresulte=mylist.toString();
+        assertEquals("{1} -> Null", testresulte);
+        mylist.insert(10);
+        mylist.insert(8);
+        String testresulte2=mylist.toString();
+        assertEquals("{8} -> {10} -> {1} -> Null", testresulte2);
+
+    }
+    @Test void testincludelist() {
+        LinkedList<Integer> mylist =new LinkedList<>();
+        mylist.insert(1);
+        mylist.insert(10);
+        mylist.insert(8);
+        boolean testresulte=mylist.include(10);
+        assertEquals(true, testresulte);
+        boolean testresulte2=mylist.include(5);
+        assertEquals(false, testresulte2);
+
+    }
+    @Test void testalllist() {
+        LinkedList<Integer> mylist =new LinkedList<>();
+        mylist.insert(1);
+        mylist.insert(10);
+        mylist.insert(8);
+        mylist.insert(9);
+        String testresulte=mylist.toString();
+        assertEquals("{9} -> {8} -> {10} -> {1} -> Null", testresulte);
+
+
+    }
+
 }

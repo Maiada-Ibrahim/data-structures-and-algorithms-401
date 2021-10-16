@@ -7,40 +7,40 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 
 class AppTest {
-    @Test void testemptylist() {
+    @Test void TestEmptyList() {
        LinkedList<Integer> mylist =new LinkedList<>();
         String correctresulte= mylist.toString();
         assertEquals("Null", correctresulte);
 
     }
-    @Test void testinsertlist() {
+    @Test void TestInsertList() {
         LinkedList<Integer> mylist =new LinkedList<>();
-        mylist.insert(1);
+        mylist.Insert(1);
         String testresulte=mylist.toString();
         assertEquals("{1} -> Null", testresulte);
-        mylist.insert(10);
-        mylist.insert(8);
+        mylist.Insert(10);
+        mylist.Insert(8);
         String testresulte2=mylist.toString();
         assertEquals("{8} -> {10} -> {1} -> Null", testresulte2);
 
     }
-    @Test void testincludelist() {
+    @Test void TestIncludeList() {
         LinkedList<Integer> mylist =new LinkedList<>();
-        mylist.insert(1);
-        mylist.insert(10);
-        mylist.insert(8);
-        boolean testresulte=mylist.include(10);
+        mylist.Insert(1);
+        mylist.Insert(10);
+        mylist.Insert(8);
+        boolean testresulte=mylist.Include(10);
         assertEquals(true, testresulte);
-        boolean testresulte2=mylist.include(5);
+        boolean testresulte2=mylist.Include(5);
         assertEquals(false, testresulte2);
 
     }
-    @Test void testalllist() {
+    @Test void TestAllList() {
         LinkedList<Integer> mylist =new LinkedList<>();
-        mylist.insert(1);
-        mylist.insert(10);
-        mylist.insert(8);
-        mylist.insert(9);
+        mylist.Insert(1);
+        mylist.Insert(10);
+        mylist.Insert(8);
+        mylist.Insert(9);
         String testresulte=mylist.toString();
         assertEquals("{9} -> {8} -> {10} -> {1} -> Null", testresulte);
 

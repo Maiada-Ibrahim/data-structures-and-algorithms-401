@@ -8,14 +8,14 @@ public class LinkedList<T> {
         this.head = null;
     }
 
-    public void insert(T value) {
+    public void Insert(T value) {
         Node firstnode = new Node(value);
         firstnode.next = head;
         head = firstnode;
 
     }
 
-    public boolean include(T value) {
+    public boolean Include(T value) {
         Node current = head;
         while (current != null) {
             if (current.value.equals(value)) {

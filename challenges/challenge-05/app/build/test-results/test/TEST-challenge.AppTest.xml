@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="challenge.AppTest" tests="4" skipped="0" failures="0" errors="0" timestamp="2021-10-16T09:57:18" hostname="LTUCSTUDENT-L17" time="0.043">
+  <properties/>
+  <testcase name="TestIncludeList()" classname="challenge.AppTest" time="0.026"/>
+  <testcase name="TestInsertList()" classname="challenge.AppTest" time="0.014"/>
+  <testcase name="TestEmptyList()" classname="challenge.AppTest" time="0.001"/>
+  <testcase name="TestAllList()" classname="challenge.AppTest" time="0.001"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

@@ -43,8 +43,6 @@ class AppTest {
         mylist.Insert(9);
         String testresulte=mylist.toString();
         assertEquals("{9} -> {8} -> {10} -> {1} -> Null", testresulte);
-
-
     }
 
 }

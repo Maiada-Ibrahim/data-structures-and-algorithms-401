@@ -7,8 +7,18 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 
 class AppTest {
-    @Test void appHasAGreeting() {
-        App classUnderTest = new App();
-        assertNotNull(classUnderTest.getGreeting(), "app should have a greeting");
+    @Test void Kth() {
+        LinkedList classUnderTest = new LinkedList();
+        classUnderTest.Insert(1);
+        classUnderTest.Insert(2);
+//        mylist.inserlast(66);
+        classUnderTest.Insert(3);
+        classUnderTest.Insert(4);
+        classUnderTest.Insert(5);
+        classUnderTest.Insert(66);
+         classUnderTest.reserve();
+        assertEquals("{66} -> {5} -> {4} -> {3} -> {2} -> {1} -> Null", classUnderTest.reserve());
+
+
     }
 }

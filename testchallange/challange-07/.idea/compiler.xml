@@ -3,4 +3,9 @@
   <component name="CompilerConfiguration">
     <bytecodeTargetLevel target="11" />
   </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="challange-07.app.main" options="--add-exports java.base/jdk.internal.org.objectweb.asm.util=ALL-UNNAMED --add-exports jdk.jdeps/com.sun.tools.classfile=ALL-UNNAMED" />
+    </option>
+  </component>
 </project>

@@ -11,20 +11,28 @@ public class Library {
         Stack stack = new Stack();
         stack.push(5);
         stack.push(4);
+        stack.push(70);
+
 //        System.out.println(stack);
 //        System.out.println(stack.pop());
 //        System.out.println(stack);
 //        System.out.println(stack.pop());
 //        System.out.println(stack);
-//        System.out.println(stack.pop());
+//        System.out.println(stack.pop().toString());
 //        System.out.println(stack);
-//        System.out.println(stack.pop());
+//        System.out.println(stack.pop().toString());
 //        System.out.println(stack);
 //         System.out.println(stack.peek());
-Queue queue=new Queue();
+//                System.out.println(stack.peek().toString());
+
+        Queue queue=new Queue();
 queue.enQueue(5);
-queue.enQueue(6);
-        System.out.println(queue);
+queue.enQueue(4);
+queue.enQueue(70);
+queue.deQueue();
+        queue.deQueue();
+
+System.out.println(queue.deQueue().toString());
 
 
 

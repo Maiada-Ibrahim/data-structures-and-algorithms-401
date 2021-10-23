@@ -30,20 +30,19 @@ public class Queue<T> {
         Node deleteNode = front;
 
             if (isEmpty()){
-                new NullPointerException();
+                return "null";
             }else {
                 this.front=front.next;
                 deleteNode.next=null;
+                return deleteNode;
             }
-
-        return deleteNode;
     }
 
     public Object peek (){
             if (isEmpty()){
-                return new NullPointerException();
+                return "null";
             }else{
-                return front.value; //returns value from of the node located at the front of the queue
+                return front.value;
             }
 
         }

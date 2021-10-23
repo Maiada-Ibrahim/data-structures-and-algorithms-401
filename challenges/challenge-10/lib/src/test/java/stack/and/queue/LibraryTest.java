@@ -7,8 +7,159 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 
 class LibraryTest {
-    @Test void someLibraryMethodReturnsTrue() {
-        Library classUnderTest = new Library();
-        assertTrue(classUnderTest.someLibraryMethod(), "someLibraryMethod should return 'true'");
+
+        @Test void stackPush() {
+            Stack StackPushTest = new Stack();
+            StackPushTest.push(5);
+//            StackPushTest.push(4);
+            String correct = StackPushTest.toString();
+            String expect ="Stack{top=Node{next=null, value=5}}";
+            assertEquals(expect, correct);
+        }
+    @Test void stackPushMultiple () {
+        Stack StackPushTest = new Stack();
+        StackPushTest.push(5);
+            StackPushTest.push(4);
+        StackPushTest.push(70);
+        String correct = StackPushTest.toString();
+        String expect ="Stack{top=Node{next=Node{next=Node{next=null, value=5}, value=4}, value=70}}";
+        assertEquals(expect, correct);
     }
+    @Test void StackPop () {
+        Stack StackPopTest = new Stack();
+        StackPopTest.push(5);
+        StackPopTest.push(4);
+        StackPopTest.push(70);
+        Object correct = StackPopTest.pop().toString();
+        Object expect ="Node{next=null, value=70}";
+        assertEquals(expect, correct);
+    }
+    @Test void stackPopMultiple () {
+        Stack StackPopTest = new Stack();
+        StackPopTest.push(5);
+        StackPopTest.push(4);
+        StackPopTest.push(70);
+        StackPopTest.pop();
+        StackPopTest.pop();
+//        StackPopTest.pop();
+
+        Object correct = StackPopTest.pop().toString();
+        Object expect ="Node{next=null, value=5}";
+        assertEquals(expect, correct);
+    }
+    @Test void stackPeek () {
+        Stack StackPopTest = new Stack();
+        StackPopTest.push(5);
+        StackPopTest.push(4);
+        StackPopTest.push(70);
+
+
+
+        Object correct = StackPopTest.peek().toString();
+        Object expect ="70";
+        assertEquals(expect, correct);
+    }
+    @Test void stackPeekAndPopEmpty () {
+        Stack StackPopTest = new Stack();
+//        StackPopTest.push(5);
+//        StackPopTest.push(4);
+//        StackPopTest.push(70);
+//        StackPopTest.pop();
+//        StackPopTest.pop();
+//        StackPopTest.pop();
+
+        Object correct = StackPopTest.pop().toString();
+        Object expect ="null";
+        assertEquals(expect, correct);
+        Object correct1 = StackPopTest.peek().toString();
+        Object expect1 ="null";
+        assertEquals(expect1, correct1);
+    }
+    @Test void queueEnQueue() {
+        Queue QueueEnQueueTest = new Queue();
+        QueueEnQueueTest.enQueue(5);
+//            StackPushTest.push(4);
+        String correct = QueueEnQueueTest.toString();
+        String expect ="Queue{front=Node{next=null, value=5}, rear=Node{next=null, value=5}}";
+        assertEquals(expect, correct);
+    }
+    @Test void queueEnQueueMultiple () {
+        Queue QueueEnQueueTest = new Queue();
+        QueueEnQueueTest.enQueue(5);
+        QueueEnQueueTest.enQueue(4);
+        QueueEnQueueTest.enQueue(70);
+        String correct = QueueEnQueueTest.toString();
+        String expect ="Queue{front=Node{next=Node{next=Node{next=null, value=70}, value=4}, value=5}, rear=Node{next=null, value=70}}";
+        assertEquals(expect, correct);
+    }
+    @Test void queueDeQueue  () {
+        Queue QueueDeQueueTest = new Queue();
+        QueueDeQueueTest.enQueue(5);
+        QueueDeQueueTest.enQueue(4);
+        QueueDeQueueTest.enQueue(70);
+//        QueueDeQueueTest.deQueue();
+//        QueueDeQueueTest.deQueue();
+//        QueueDeQueueTest.deQueue();
+        Object correct = QueueDeQueueTest.deQueue().toString();
+        Object expect ="Node{next=null, value=5}";
+        assertEquals(expect, correct);
+    }
+    @Test void  queuPeek () {
+        Queue queuPeekTest = new Queue();
+        queuPeekTest.enQueue(5);
+        queuPeekTest.enQueue(4);
+        queuPeekTest.enQueue(70);
+        Object correct = queuPeekTest.peek().toString();
+        Object expect ="5";
+        assertEquals(expect, correct);
+    }
+    @Test void queueDeQueueMultiple  () {
+        Queue QueueDeQueueTest = new Queue();
+        QueueDeQueueTest.enQueue(5);
+        QueueDeQueueTest.enQueue(4);
+        QueueDeQueueTest.enQueue(70);
+        QueueDeQueueTest.deQueue();
+        QueueDeQueueTest.deQueue();
+//        QueueDeQueueTest.deQueue();
+        Object correct = QueueDeQueueTest.deQueue().toString();
+        Object expect ="Node{next=null, value=70}";
+        assertEquals(expect, correct);
+    }
+    @Test void queueDeQueueEmpty  () {
+        Queue QueueDeQueueTest = new Queue();
+        QueueDeQueueTest.enQueue(5);
+        QueueDeQueueTest.enQueue(4);
+        QueueDeQueueTest.enQueue(70);
+        QueueDeQueueTest.deQueue();
+        QueueDeQueueTest.deQueue();
+        QueueDeQueueTest.deQueue();
+        Object correct = QueueDeQueueTest.deQueue().toString();
+        Object expect ="null";
+        assertEquals(expect, correct);
+    }
+    @Test void queueEmpty  () {
+        Queue QueueDeQueueTest = new Queue();
+        Object correct = QueueDeQueueTest.deQueue().toString();
+        Object expect ="null";
+        assertEquals(expect, correct);
+        Object correct1 = QueueDeQueueTest.peek().toString();
+        Object expect1 ="null";
+        assertEquals(expect1, correct1);
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 }
+

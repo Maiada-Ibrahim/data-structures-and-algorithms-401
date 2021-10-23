@@ -21,36 +21,43 @@ public class Stack<T> {
 
     public Object pop() {
         Node lastNode = top;
-        try {
-            if (lastNode.equals(null)) {
-                return new NullPointerException();
-            }
+            if  ( isEmpty()) {
+                return "null";
+            }else {
             top = top.next;
             lastNode.next = null;
-        } catch (NullPointerException ex) {
-            System.out.println(ex);
-        }
-        return lastNode;
+                return lastNode;
+
+            }
     }
+
+//    @Override
+//    public String toString() {
+//        Node current = top;
+//        String resulte = "";
+//        while (current != null) {
+//            resulte = resulte + "{" + current.value + "} -> ";
+//            current = current.next;
+//        }
+//
+//        resulte = resulte + "Null";
+//        return resulte;
+//    }
+
 
     @Override
     public String toString() {
-        Node current = top;
-        String resulte = "";
-        while (current != null) {
-            resulte = resulte + "{" + current.value + "} -> ";
-            current = current.next;
-        }
-
-        resulte = resulte + "Null";
-        return resulte;
+        return "Stack{" +
+                "top=" + top +
+                '}';
     }
+
     public Object peek() {
         Node lastNode = top;
 
         
-            if (lastNode.equals(null)) {
-                return new NullPointerException();
+            if (isEmpty()) {
+                return "null";
             } else {
                 return top.value;
             }

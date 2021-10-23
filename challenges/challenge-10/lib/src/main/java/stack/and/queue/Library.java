@@ -3,8 +3,36 @@
  */
 package stack.and.queue;
 
+import java.io.IOException;
+
 public class Library {
-    public boolean someLibraryMethod() {
-        return true;
+    public static void main(String[] args) {
+
+        Stack stack = new Stack();
+        stack.push(5);
+        stack.push(4);
+//        System.out.println(stack);
+//        System.out.println(stack.pop());
+//        System.out.println(stack);
+//        System.out.println(stack.pop());
+//        System.out.println(stack);
+//        System.out.println(stack.pop());
+//        System.out.println(stack);
+//        System.out.println(stack.pop());
+//        System.out.println(stack);
+//         System.out.println(stack.peek());
+Queue queue=new Queue();
+queue.enQueue(5);
+queue.enQueue(6);
+        System.out.println(queue);
+
+
+
+
+
+
     }
+
+
+
 }

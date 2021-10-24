@@ -146,6 +146,7 @@ class LibraryTest {
         Object expect1 ="null";
         assertEquals(expect1, correct1);
     }
+stack-queue-pseudo
     @Test void psudoEnQueue  () {
         PseudoQueue<Integer> ps = new PseudoQueue<>();
         ps.enqueue(5);
@@ -163,8 +164,6 @@ class LibraryTest {
         String correct = ps.toString();
         assertEquals("PseudoQueue{stack1=Stack{top=Node{next=Node{next=null, value=Node{next=null, value=Node{next=null, value=10}}}, value=Node{next=null, value=Node{next=null, value=15}}}}}", correct);
     }
-
-
 
 
 

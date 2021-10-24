@@ -2,7 +2,15 @@ package stack.and.queue;
 
 public class Stack<T> {
 
-    Node top;
+    private Node top;
+
+    public Node getTop() {
+        return top;
+    }
+
+    public void setTop(Node top) {
+        this.top = top;
+    }
 
     public Stack(Node top) {
         this.top = top;
@@ -15,8 +23,6 @@ public class Stack<T> {
         top = node;
 
     }
-
-
 
 
     public Object pop() {

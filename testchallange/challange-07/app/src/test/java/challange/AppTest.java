@@ -21,4 +21,20 @@ class AppTest {
 
 
     }
+    @Test void zipList() {
+        LinkedList list1 = new LinkedList();
+        LinkedList list2 = new LinkedList();
+        LinkedList ziplist = new LinkedList();
+
+
+        list1.Insert(1);
+        list1.Insert(2);
+        list1.Insert(3);
+        list2.Insert(20);
+        list2.Insert(21);
+        list2.Insert(22);
+        assertEquals("{20} -> {1} -> {21} -> {2} -> {22} -> {3} -> Null", LinkedList.zipLists(list1,list2).toString());
+
+
+    }
 }

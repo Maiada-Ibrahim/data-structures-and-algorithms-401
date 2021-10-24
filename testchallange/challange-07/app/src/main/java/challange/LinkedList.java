@@ -141,8 +141,37 @@ public T kthfromend( int indexof) {
 //
 //return  ziplinked;
 //
-//}
-public String reserve() {
+//
+
+    public int size(){
+        Node current = this.head;
+        int nodesNumber=1;
+        while(current.getNext() != null){
+            nodesNumber +=1;
+            current = current.getNext();
+
+        }
+        return nodesNumber;
+
+    }
+    public static Object zipLists(LinkedList list1, LinkedList list2){
+        LinkedList listZip = new LinkedList();
+        if (list1.size() != list2.size()){
+            return "to use this method the the two list should have the same length";
+        }
+        Node current1= list1.head;
+        Node current2= list2.head;
+
+        while (current1 != null){
+            listZip.Insert(current1.value);
+            listZip.Insert(current2.value);
+            current1=current1.getNext();
+            current2=current2.getNext();
+        }
+        System.out.println(listZip.toString());
+        return listZip;
+    }
+    public String reserve() {
     Node reversedPart = null;
     Node current = head;
     while (current != null) {

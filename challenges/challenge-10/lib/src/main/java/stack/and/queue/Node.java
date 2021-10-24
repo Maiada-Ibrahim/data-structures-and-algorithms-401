@@ -6,7 +6,7 @@ public class Node<T> {
     public Node next;
     public T value;
 
-    public Node( T value) {
+    public   Node( T value) {
         this.value = value;
     }
 
@@ -17,4 +17,15 @@ public class Node<T> {
                 ", value=" + value +
                 '}';
     }
+
+
+    public T getValue() {
+        return value;
+    }
+
+
+
+//    public void setValue(T value) {
+//        this.value = value;
+//    }
 }

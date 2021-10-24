@@ -24,16 +24,25 @@ public class Library {
 //        System.out.println(stack);
 //         System.out.println(stack.peek());
 //                System.out.println(stack.peek().toString());
+//
+//        Queue queue=new Queue();
+//queue.enQueue(5);
+//queue.enQueue(4);
+//queue.enQueue(70);
+//queue.deQueue();
+//        queue.deQueue();
 
-        Queue queue=new Queue();
-queue.enQueue(5);
-queue.enQueue(4);
-queue.enQueue(70);
-queue.deQueue();
-        queue.deQueue();
+//System.out.println(queue.deQueue().toString());
 
-System.out.println(queue.deQueue().toString());
+        PseudoQueue<Integer> ps = new PseudoQueue<>();
+                 ps.enqueue(5);
+                 ps.enqueue(10);
+                 ps.enqueue(15);
+                 System.out.println(ps.toString());
+                 System.out.println(ps.dequeue());
 
+
+        System.out.println(ps.toString());
 
 
 
@@ -42,5 +51,6 @@ System.out.println(queue.deQueue().toString());
     }
 
 
-
+    private static class T {
+    }
 }

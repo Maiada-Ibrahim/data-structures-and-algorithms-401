@@ -165,7 +165,47 @@ stack-queue-pseudo
         assertEquals("PseudoQueue{stack1=Stack{top=Node{next=Node{next=null, value=Node{next=null, value=Node{next=null, value=10}}}, value=Node{next=null, value=Node{next=null, value=15}}}}}", correct);
     }
 
+//----------------------------------cc12
+@Test
+public void catClassTest() {
+    Cat cat = new Cat("cat1");
+    Animal animalCat = new Cat("cat2");
+    assertEquals("cat1", "cat1", cat.getName());
+    assertEquals("Cat", "Cat", animalCat.getClass().getSimpleName());
+}
+    @Test
+    public void dogClassTest() {
+        Dog dog = new Dog("dog1");
+        Animal animalDog = new Dog("dog2");
 
+        assertEquals("dog1", "dog1", dog.getName());
+        assertEquals("Dog", "Dog", animalDog.getClass().getSimpleName());
+    }
+
+    @Test
+    public void enQueueTest() {
+        AnimalShelter shelter = new AnimalShelter();
+
+        shelter.enqueue(new Cat("cat1"));
+        shelter.enqueue(new Cat("cat2"));
+        shelter.enqueue(new Dog("dog1"));
+
+
+        assertEquals("AnimalShelter{dogs=Queue{front=Node{next=null, value=dog1}, rear=Node{next=null, value=dog1}}, cats=Queue{front=Node{next=Node{next=null, value=cat2}, value=cat1}, rear=Node{next=null, value=cat2}}}", shelter.toString());
+
+    }
+
+    @Test
+    public void deQueueTest() {
+        AnimalShelter shelter = new AnimalShelter();
+
+        shelter.enqueue(new Cat("cat1"));
+        shelter.enqueue(new Dog("dog1"));
+        shelter.enqueue(new Cat("cat2"));
+
+
+        assertEquals("Node{next=null, value=cat1}", shelter.dequeue("cat"));
+    }
 
 
 

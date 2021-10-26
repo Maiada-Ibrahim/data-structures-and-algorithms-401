@@ -206,8 +206,17 @@ public void catClassTest() {
         assertEquals("Node{next=null, value=cat1}", shelter.dequeue("cat"));
     }
 
+//-------------------------------cc13
 
+    @Test
+    public void CheckerTest() {
+            CheckerBracket cheker = new CheckerBracket();
+    boolean  correct = cheker.validateBrackets("()[[Extra Characters]]");
+   boolean notCorrect=     cheker.validateBrackets("(](");
+        assertEquals(true, correct);
+        assertEquals(false, notCorrect);
 
+    }
 
 
 

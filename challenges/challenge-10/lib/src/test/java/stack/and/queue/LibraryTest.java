@@ -213,8 +213,14 @@ public void catClassTest() {
             CheckerBracket cheker = new CheckerBracket();
     boolean  correct = cheker.validateBrackets("()[[Extra Characters]]");
    boolean notCorrect=     cheker.validateBrackets("(](");
+        boolean notCorrect2=     cheker.validateBrackets("{");
+        boolean correct2=     cheker.validateBrackets("{jklkjl[]llllllllll}");
+
         assertEquals(true, correct);
         assertEquals(false, notCorrect);
+        assertEquals(false, notCorrect2);
+        assertEquals(true, correct2);
+
 
     }
 

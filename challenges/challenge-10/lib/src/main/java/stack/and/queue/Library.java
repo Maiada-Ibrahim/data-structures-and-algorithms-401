@@ -34,15 +34,33 @@ public class Library {
 
 //System.out.println(queue.deQueue().toString());
 
-        PseudoQueue<Integer> ps = new PseudoQueue<>();
-                 ps.enqueue(5);
-                 ps.enqueue(10);
-                 ps.enqueue(15);
-                 System.out.println(ps.toString());
-                 System.out.println(ps.dequeue());
+//        PseudoQueue<Integer> ps = new PseudoQueue<>();
+//                 ps.enqueue(5);
+//                 ps.enqueue(10);
+//                 ps.enqueue(15);
+//                 System.out.println(ps.toString());
+//                 System.out.println(ps.dequeue());
+//
+//
+//        System.out.println(ps.toString());
 
 
-        System.out.println(ps.toString());
+//------------------------------------------cc12
+        Cat cat1= new Cat("cat1");
+        Cat cat2= new Cat("cat2");
+        Dog dog1= new Dog("dog1");
+//        Dog dog2= new Dog("dog2");
+        AnimalShelter shelter= new AnimalShelter();
+        shelter.enqueue(cat1);
+        shelter.enqueue(cat2);
+        shelter.enqueue(dog1);
+//        shelter.enqueue(dog2);
+        System.out.println(shelter.toString());
+        System.out.println(shelter.dequeue("cat"));
+        System.out.println(shelter.dequeue("dog"));
+        System.out.println(shelter.dequeue("dog"));
+
+        System.out.println(shelter.toString());
 
 
 
@@ -51,6 +69,5 @@ public class Library {
     }
 
 
-    private static class T {
-    }
+
 }

@@ -46,23 +46,32 @@ public class Library {
 
 
 //------------------------------------------cc12
-        Cat cat1= new Cat("cat1");
-        Cat cat2= new Cat("cat2");
-        Dog dog1= new Dog("dog1");
-//        Dog dog2= new Dog("dog2");
-        AnimalShelter shelter= new AnimalShelter();
-        shelter.enqueue(cat1);
-        shelter.enqueue(cat2);
-        shelter.enqueue(dog1);
-//        shelter.enqueue(dog2);
-        System.out.println(shelter.toString());
-        System.out.println(shelter.dequeue("cat"));
-        System.out.println(shelter.dequeue("dog"));
-        System.out.println(shelter.dequeue("dog"));
-
-        System.out.println(shelter.toString());
-
-
+//        Cat cat1= new Cat("cat1");
+//        Cat cat2= new Cat("cat2");
+//        Dog dog1= new Dog("dog1");
+////        Dog dog2= new Dog("dog2");
+//        AnimalShelter shelter= new AnimalShelter();
+//        shelter.enqueue(cat1);
+//        shelter.enqueue(cat2);
+//        shelter.enqueue(dog1);
+////        shelter.enqueue(dog2);
+//        System.out.println(shelter.toString());
+//        System.out.println(shelter.dequeue("cat"));
+//        System.out.println(shelter.dequeue("dog"));
+//        System.out.println(shelter.dequeue("dog"));
+//
+//        System.out.println(shelter.toString());
+//---------------------------------------------cc13
+          CheckerBracket cheker = new CheckerBracket();
+      System.out.println(cheker.validateBrackets("{}"));
+      System.out.println(cheker.validateBrackets("{}(){}"));
+      System.out.println(cheker.validateBrackets("()[[Extra Characters]]"));
+      System.out.println(cheker.validateBrackets("(){}[[]]"));
+      System.out.println(cheker.validateBrackets("(){}[[]]"));
+      System.out.println(cheker.validateBrackets("{}{Code}[Fellows](())"));
+      System.out.println(cheker.validateBrackets("[({}]"));
+      System.out.println(cheker.validateBrackets("(]("));
+      System.out.println(cheker.validateBrackets("{(})"));
 
 
 

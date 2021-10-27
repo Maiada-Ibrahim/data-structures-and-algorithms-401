@@ -12,4 +12,4 @@
 |Challenge-10|[Stacks and Queues](https://github.com/Maiada-Ibrahim/data-structures-and-algorithms-401/tree/main/challenges/challenge-10)|
 |Challenge-11|[stack-queue-pseudo](https://github.com/Maiada-Ibrahim/data-structures-and-algorithms-401/tree/main/challenges/challenge-11)|
 |Challenge-12|[stack-queue-animal-shelter](https://github.com/Maiada-Ibrahim/data-structures-and-algorithms-401/tree/main/challenges/challange-12)|
-|Challenge-12|[stack-queue-brackets](https://github.com/Maiada-Ibrahim/data-structures-and-algorithms-401/tree/main/challenges/challange-13)|
+|Challenge-13|[stack-queue-brackets](https://github.com/Maiada-Ibrahim/data-structures-and-algorithms-401/tree/main/challenges/challange-13)|

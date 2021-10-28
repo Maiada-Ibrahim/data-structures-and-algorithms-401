@@ -74,9 +74,8 @@ public class Library {
       System.out.println(cheker.validateBrackets("{(})"));
 
 
-
+        System.out.println(stack.getMax());
     }
-
 
 
 }

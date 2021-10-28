@@ -72,4 +72,19 @@ public class Stack<T> {
     public boolean isEmpty(){
         return top == null;
     }
+
+    public  Integer  getMax(){
+        Node<Integer> max = this.top ;
+        Node<Integer> current= this.top;
+        while (current != null){
+            if (current.value  > max.value){
+                max=current;
+            }
+            current=current.next;
+        }
+        return max.value;
+    }
+
+
+
 }

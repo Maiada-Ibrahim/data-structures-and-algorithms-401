@@ -16,8 +16,8 @@ class AppTest {
         classUnderTest.Insert(4);
         classUnderTest.Insert(5);
         classUnderTest.Insert(66);
-         classUnderTest.reserve();
-        assertEquals("{66} -> {5} -> {4} -> {3} -> {2} -> {1} -> Null", classUnderTest.reserve());
+         classUnderTest.kthfromend(5);
+        assertEquals("5", classUnderTest.kthfromend(5).toString());
 
 
     }

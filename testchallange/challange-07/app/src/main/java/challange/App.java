@@ -19,23 +19,23 @@ public class App {
 //        mylist.Insert(1);
 //        mylist.Insert(2);
 ////        mylist.inserlast(66);
-//        mylist.Insert(3);
-//        mylist.Insert(4);
-//        mylist.Insert(5);
+        mylist.Insert(3);
+        mylist.Insert(4);
+        mylist.Insert(5);
+
 //        mylist.Insert(66);
-//        mylist2.Insert(7);
-//        mylist2.Insert(8);
-//        mylist2.Insert(7);
-//        mylist2.Insert(4);
+        mylist2.Insert(8);
+        mylist2.Insert(7);
+        mylist2.Insert(4);
 //        mylist2.Insert(7);
 //        mylist2.Insert(77);
 //        mylist2.Insert(8);
-        mylist.Insert(1);
-        mylist.Insert(2);
-        mylist.Insert(3);
-        mylist2.Insert(20);
-        mylist2.Insert(21);
-        mylist2.Insert(22);
+//        mylist.Insert(1);
+//        mylist.Insert(2);
+//        mylist.Insert(3);
+//        mylist2.Insert(20);
+//        mylist2.Insert(21);
+//        mylist2.Insert(22);
         System.out.println(mylist.toString());
         System.out.println(mylist2.toString());
 
@@ -46,7 +46,7 @@ public class App {
 //        System.out.println(mylist.toString());
 //       System.out.println(mylist.Include(10));
 //        System.out.println(mylist.Include(3));
-//        System.out.println(mylist.kthfromend(66));
+//        System.out.println(mylist.kthfromend(4));
 
 
 //        System.out.println(mylist.reserve());

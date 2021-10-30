@@ -104,10 +104,8 @@ public T kthfromend( int indexof) {
 
     while (current != null) {
      index=index+1;
-
         if (index== indexof){
             indexValue= current;
-
             break;
         }
         current = current.next;
@@ -168,7 +166,7 @@ public T kthfromend( int indexof) {
             current1=current1.getNext();
             current2=current2.getNext();
         }
-        System.out.println(listZip.toString());
+//        System.out.println(listZip.toString());
         return listZip;
     }
     public String reserve() {

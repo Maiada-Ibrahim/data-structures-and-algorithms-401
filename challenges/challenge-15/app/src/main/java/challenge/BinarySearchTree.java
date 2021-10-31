@@ -6,6 +6,7 @@ public class BinarySearchTree extends BinaryTree {
 
         super(value);
     }
+
 //-----------------------------------------------------------------------------------
     private void traverse(Node<Integer> current, Integer value) throws NullPointerException{
         if (current.getValue()>value){
@@ -44,6 +45,7 @@ public class BinarySearchTree extends BinaryTree {
         String result=this.PostOrder(this.getRoot());
         return result.contains( value.toString());
     }
+//---------------------------------------
 
 
 

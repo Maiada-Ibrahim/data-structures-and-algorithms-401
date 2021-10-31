@@ -5,10 +5,13 @@ public class BinaryTree<T> {
     private String preOrderTree="";
     private String inOrderTree="";
     private String PostOrderTree="";
+//    public Integer maxValue;
+
 
     public BinaryTree(T value) {
         Node<T> root= new Node<T>(value);
         this.root = root;
+
     }
 
     public BinaryTree() {
@@ -49,12 +52,34 @@ public String inOrder(Node node){
         return PostOrderTree;
 
     }
-//----------------------------------------------------------
+//---------------------------------cc-16-------------------------
 
-
-
-
-
+    public int max(){
+        return Max((Node<Integer>) root);
+    }
+public int Max(Node<Integer> current) throws NullPointerException{
+    int maxValue= (Integer) root.getValue();
+    System.out.println(current.getLeft());
+        if (current.getLeft() != null){
+            if (current.getLeft().getValue()>maxValue){
+                maxValue=current.getLeft().getValue();
+            }else{
+                current=current.getLeft();
+                Max(current);
+            }
+        }
+        if (current.getRight() !=null){
+            if (current.getRight().getValue()>maxValue){
+                maxValue=current.getRight().getValue();
+            }
+            else {
+            current=current.getRight();
+            Max(current);
+        }
+        }
+    return maxValue;
+}
+//-------------------------------------------------------------------------
 
 
 
@@ -68,10 +93,12 @@ public String inOrder(Node node){
 
 
     public Node<T> getRoot() {
+
         return root;
     }
 
-    public void setRoot(Node<T> root) {
+    public void setRoot( T value) {
+        Node<T> root=new Node<>(value);
         this.root = root;
     }
 

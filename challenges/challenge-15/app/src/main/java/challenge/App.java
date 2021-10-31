@@ -7,26 +7,34 @@ public class App {
 
 
     public static void main(String[] args) {
-//        Node<Integer> root=new Node<Integer>(5);
+        Node<Integer> root=new Node<Integer>(5);
+        Node<Integer> root1=new Node<Integer>(20);
 
-//        BinaryTree<Integer> pre = new BinaryTree<Integer>();
-//        pre.getRoot().setLeft(3);
-//        pre.getRoot().setRight(2);
+
+
+        BinaryTree<Integer> pre = new BinaryTree<Integer>(5);
+        pre.getRoot().setLeft(8);
+        pre.getRoot().setRight(6);
+        pre.getRoot().setRight(10);
+        pre.getRoot().setLeft(99);
+
+
+
+
 //        pre.getRoot().getLeft().setRight(1);
 //        System.out.println( pre.getRoot().getValue());
 //        System.out.println(pre.getRoot().getRight().getValue());
-        BinarySearchTree binarySearchTree= new BinarySearchTree(5);
+//        BinarySearchTree binarySearchTree= new BinarySearchTree(3);
 //        BinaryTree<Integer> pre = new BinaryTree<Integer>(binarySearchTree);
-        binarySearchTree.Add(2);
-        binarySearchTree.Add(7);
-        binarySearchTree.Add(8);
+//        binarySearchTree.Add(2);
+//        binarySearchTree.Add(7);
+//        binarySearchTree.Add(8);
 //System.out.println(binarySearchTree.inOrder(binarySearchTree.getRoot()));
 //System.out.println(binarySearchTree.PostOrder(binarySearchTree.getRoot()));
 //System.out.println(binarySearchTree.preOrder(binarySearchTree.getRoot()));
+//        System.out.println(binarySearchTree.Contains(7));
 
-
-        System.out.println(binarySearchTree.Contains(7));
-
+        System.out.println(pre.max());
 
 
     }

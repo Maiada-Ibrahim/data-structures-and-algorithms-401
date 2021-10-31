@@ -69,5 +69,17 @@ class AppTest {
         boolean expect2=false;
         assertEquals(expect2, correct2);
     }
+    @Test void Max() {
+        BinaryTree<Integer> pre = new BinaryTree<Integer>(5);
+        pre.getRoot().setLeft(8);
+        pre.getRoot().setRight(6);
+        pre.getRoot().setRight(10);
+        pre.getRoot().setLeft(99);
+        int correct =pre.max();
+
+        assertEquals(99, correct);
+
+
+    }
 
 }

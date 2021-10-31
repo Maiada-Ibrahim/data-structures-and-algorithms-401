@@ -14,3 +14,4 @@
 |Challenge-12|[stack-queue-animal-shelter](https://github.com/Maiada-Ibrahim/data-structures-and-algorithms-401/tree/main/challenges/challange-12)|
 |Challenge-13|[stack-queue-brackets](https://github.com/Maiada-Ibrahim/data-structures-and-algorithms-401/tree/main/challenges/challange-13)|
 |Challenge-15|[ Binary Tree and BST Implementation](https://github.com/Maiada-Ibrahim/data-structures-and-algorithms-401/tree/main/challenges/challenge-15)|
+|Challenge-16|[ tree-max](https://github.com/Maiada-Ibrahim/data-structures-and-algorithms-401/tree/main/challenges/challenge-16)|

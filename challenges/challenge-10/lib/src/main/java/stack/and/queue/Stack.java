@@ -32,7 +32,7 @@ public class Stack<T> {
             }else {
             top = top.next;
             lastNode.next = null;
-                return lastNode;
+                return lastNode.value;
 
             }
     }

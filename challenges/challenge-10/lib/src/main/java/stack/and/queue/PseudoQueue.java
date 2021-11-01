@@ -24,8 +24,14 @@ public class PseudoQueue<T> {
     }
     @Override
     public String toString() {
-        return "PseudoQueue{" +
-                "stack1=" + stack1 +
-                '}';
+        Node current = stack1.getTop();
+        String resulte = "";
+        while (current != null) {
+            resulte = resulte + "{" + current.value + "} -> ";
+            current = current.next;
+        }
+
+        resulte = resulte+ "null" ;
+        return resulte;
     }
 }

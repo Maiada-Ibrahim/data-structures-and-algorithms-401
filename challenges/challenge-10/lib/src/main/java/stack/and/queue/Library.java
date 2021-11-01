@@ -34,15 +34,15 @@ public class Library {
 
 //System.out.println(queue.deQueue().toString());
 
-//        PseudoQueue<Integer> ps = new PseudoQueue<>();
-//                 ps.enqueue(5);
-//                 ps.enqueue(10);
-//                 ps.enqueue(15);
-//                 System.out.println(ps.toString());
-//                 System.out.println(ps.dequeue());
-//
-//
-//        System.out.println(ps.toString());
+        PseudoQueue<Integer> ps = new PseudoQueue<>();
+                 ps.enqueue(5);
+                 ps.enqueue(10);
+                 ps.enqueue(15);
+                 System.out.println(ps.toString());
+                 System.out.println(ps.dequeue());
+        ps.enqueue(88);
+        System.out.println(ps.dequeue());
+        System.out.println(ps.toString());
 
 
 //------------------------------------------cc12
@@ -62,19 +62,19 @@ public class Library {
 //
 //        System.out.println(shelter.toString());
 //---------------------------------------------cc13
-          CheckerBracket cheker = new CheckerBracket();
-      System.out.println(cheker.validateBrackets("{}"));
-      System.out.println(cheker.validateBrackets("{}(){}"));
-      System.out.println(cheker.validateBrackets("()[[Extra Characters]]"));
-      System.out.println(cheker.validateBrackets("(){}[[]]"));
-      System.out.println(cheker.validateBrackets("(){}[[]]"));
-      System.out.println(cheker.validateBrackets("{}{Code}[Fellows](())"));
-      System.out.println(cheker.validateBrackets("[({}]"));
-      System.out.println(cheker.validateBrackets("(]("));
-      System.out.println(cheker.validateBrackets("{(})"));
-
-
-        System.out.println(stack.getMax());
+//          CheckerBracket cheker = new CheckerBracket();
+//      System.out.println(cheker.validateBrackets("{}"));
+//      System.out.println(cheker.validateBrackets("{}(){}"));
+//      System.out.println(cheker.validateBrackets("()[[Extra Characters]]"));
+//      System.out.println(cheker.validateBrackets("(){}[[]]"));
+//      System.out.println(cheker.validateBrackets("(){}[[]]"));
+//      System.out.println(cheker.validateBrackets("{}{Code}[Fellows](())"));
+//      System.out.println(cheker.validateBrackets("[({}]"));
+//      System.out.println(cheker.validateBrackets("(]("));
+//      System.out.println(cheker.validateBrackets("{(})"));
+//
+//
+//        System.out.println(stack.getMax());
     }
 
 

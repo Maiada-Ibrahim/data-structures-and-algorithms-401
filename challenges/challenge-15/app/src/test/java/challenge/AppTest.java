@@ -81,5 +81,15 @@ class AppTest {
 
 
     }
+    @Test void  breadthFirstTest() {
+        BinaryTree binaryTest= new BinaryTree<Integer>(9);
+        binaryTest.getRoot().setLeft(4);
+        binaryTest.getRoot().setRight(6);
+        binaryTest.getRoot().getLeft().setRight(3);
+
+        assertEquals("[9, 4, 6, 3]", binaryTest.breadthFirst());
+
+
+    }
 
 }

@@ -1,5 +1,8 @@
 package challenge;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class BinaryTree<T> {
     private Node<T> root;
     private String preOrderTree="";
@@ -81,7 +84,27 @@ public int Max(Node<Integer> current) throws NullPointerException{
 }
 //-------------------------------------------------------------------------
 
+    public String breadthFirst(){
+        Node node = this.root;
+        List<Integer> breathFirstValues= new ArrayList<>();
+        breathFirstValues.add((Integer) node.getValue());
+        return breadthFirstTraverse(node,breathFirstValues);
+    }
 
+    private String breadthFirstTraverse(Node node, List<Integer> breathFirstValues ){
+        if (node != null){
+            if (node.getLeft() !=null){
+                breathFirstValues.add((Integer) node.getLeft().getValue());
+            }
+            if (node.getRight() !=null){
+
+                breathFirstValues.add((Integer) node.getRight().getValue());
+            }
+            breadthFirstTraverse(node.getLeft(),breathFirstValues);
+            breadthFirstTraverse(node.getRight(),breathFirstValues);
+        }
+        return breathFirstValues.toString();
+    }
 
 
 

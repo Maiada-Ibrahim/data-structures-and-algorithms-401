@@ -9,7 +9,7 @@ If the value is divisible by 5, replace the value with “Buzz”
 If the value is divisible by 3 and 5, replace the value with “FizzBuzz”
 If the value is not divisible by 3 or 5, simply turn the number into a String.
 ## Whiteboard Process
-![](challenge-17.png) 
+![](challenge-18.png) 
 
 ## Approach & Efficiency
 Big O for the time is O(n)
@@ -29,5 +29,8 @@ If the value is divisible by 3 and 5, replace the value with “FizzBuzz”
 
 If the value is not divisible by 3 or 5, simply turn the number into a String.
 
+
+the main concept is to use breadth first traversal but this time on k-ary where every node in the tree has a k number of children:
+create new k-tree with same value of k the origin tree
 ## link
 [link for code](https://github.com/Maiada-Ibrahim/data-structures-and-algorithms-401/tree/main/challenges/challenge-15)

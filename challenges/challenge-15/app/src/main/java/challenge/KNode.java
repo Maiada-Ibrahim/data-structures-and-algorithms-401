@@ -1,42 +1,37 @@
 package challenge;
 
-public class KNode {
-    private KNode nodeX;
-    private String value;
-    private KNode[] nodesList;
-    private int degree;
+import java.util.ArrayList;
+import java.util.List;
 
-    public KNode(int k, String value) {
-        this.nodesList =  new KNode[k];
-        this.value=value;
-        this.degree=k;
-    }
+public class KNode<T> {
 
-    public KNode getNodesListItem(int i) {
-        System.out.println(nodesList[i]);
-        return  nodesList[i];
-    }
+    T value;
+    List<KNode> children = new ArrayList<>();
 
-//    public void setNodesListItem(int i,T value) {
-//        KNode<T> targetNode= getNodesListItem(i);
-//        targetNode= new KNode<T>(degree,value);
-//        System.out.println();
-//    }
-
-    public void setNodesListItem(int order, String value) {
-        KNode newNode = new KNode (this.degree,value);
-        nodesList[order]= newNode;
-    }
-
-    public String getValue() {
-        return value;
-    }
-
-    public int getDegree() {
-        return degree;
-    }
-
-    public void setValue(String value) {
+    public KNode(T value) {
         this.value = value;
+    }
+
+
+    public List<KNode> getChildren() {
+        return children;
+    }
+
+    public void addChild(KNode child) {
+        this.children.add(child);
+    }
+
+    @Override
+    public String toString() {
+        StringBuilder result = new StringBuilder("{value= ");
+        result.append(value);
+        result.append("\nChildren: [");
+        for (KNode ch : children) {
+            result.append("\n child: ");
+            result.append(ch);
+        }
+        result.append("]");
+
+        return result.toString();
     }
 }

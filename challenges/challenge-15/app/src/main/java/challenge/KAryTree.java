@@ -1,50 +1,67 @@
 package challenge;
 
-public class KAryTree {
-    private KNode root;
-    private String preOrderTree;
+import java.util.ArrayList;
+import java.util.List;
 
-    public KAryTree(int k, String rootValue) {
-        this.root = new KNode(k, rootValue);
+public class KAryTree<T> {
+    private KAryNode<T> root;
+    private int height;
+    private int index = 0;
+    private final List<KAryNode<T>> KArayTreeNodes = new ArrayList<>();
+
+    public KAryTree(List<T> values, int K){
+        height = (int)Math.ceil((Math.log((double)values.size() * (K - 1)) / Math.log(K)) - 1) + 1;
+        System.out.println(height);
+        int arrayLength = values.size();
+
+        if (arrayLength <= 0) {
+            return;
+        }
+        root = new KAryNode<>(values.get(0),K);
+        KArayTreeNodes.add(root);
+        createKAryTree(values, K, root);
     }
-    public KNode getRoot() {
+
+    private void createKAryTree(List<T> values, int K, KAryNode<T> node){
+        for (int j = 0; j < K; j++) {
+            if ((K * index + (j + 1)) > (values.size() - 1)){
+                return;
+            }else {
+                KArayTreeNodes.add(node.addChild(values.get(K * index + (j + 1))));
+            }
+        }
+        if (index < values.size()) {
+            index++;
+            createKAryTree(values, K, KArayTreeNodes.get(index));
+        }
+    }
+    // Function to print postorder traversal of the tree
+    public void postorder(KAryNode<T> root) {
+
+        if (root == null) {
+            return;
+        }
+        for (int i = 0; i < root.getChildren().size(); i++) {
+            postorder(root.getChildren().get(i));
+        }
+        System.out.print(root.getKey() + " ");
+
+    }
+
+    public void treeFizzBuzz(){
+        for (KAryNode<T> kAryNode: KArayTreeNodes){
+            if ((((Integer) kAryNode.getKey()) % 3 == 0) && (((Integer) kAryNode.getKey()) % 5 == 0)){
+                kAryNode.setKey((T) "FizzBuzz");
+            }else if(((Integer) kAryNode.getKey()) % 3 == 0){
+                kAryNode.setKey((T) "Fizz");
+            }else if(((Integer) kAryNode.getKey()) % 5 == 0){
+                kAryNode.setKey((T) "Buzz");
+            }else {
+                kAryNode.setKey((T) kAryNode.getKey());
+            }
+        }
+    }
+    public KAryNode<T> getRoot() {
         return root;
-    }
-    public String preOrder(KNode node){
-
-        if (node !=null){
-            System.out.println(node.getValue());
-            preOrderTree +="<<"+node.getValue();
-            for (int i=0;i< node.getDegree();i++){
-                preOrder(node.getNodesListItem(i));
-            }
-        }
-        return preOrderTree;
-    }
-
-    public void preOrderTraverse(KNode node){
-
-        if (node !=null){
-            System.out.println("from checker"+node.getValue());
-            preOrderTree +="<<"+node.getValue();
-            if(node.getValue().equals("3") && node.getValue().equals("5")){
-                node.setValue("FizzBuzz");
-            }
-            else if (node.getValue().equals("3")){
-                node.setValue("Fizz");
-            }else if(node.getValue().equals("5")){
-                node.setValue("Buzz");
-            }else{
-                node.setValue("Buzz");
-            }
-            for (int i=0;i< node.getDegree();i++){
-                preOrderTraverse(node.getNodesListItem(i));
-            }
-        }
-    }
-
-    public void checker(){
-        preOrderTraverse(this.root);
-
     }
 }

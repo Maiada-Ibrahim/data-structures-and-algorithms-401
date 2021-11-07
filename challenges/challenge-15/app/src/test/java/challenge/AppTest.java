@@ -91,5 +91,21 @@ class AppTest {
 
 
     }
+    @Test
+
+    void oddSumTest(){
+      BinarySearchTree  binarySearchTree2=new BinarySearchTree(8);
+        binarySearchTree2.Add(3);
+        binarySearchTree2.Add(10);
+        binarySearchTree2.Add(1);
+        binarySearchTree2.Add(6);
+        binarySearchTree2.Add(14);
+        binarySearchTree2.Add(4);
+        binarySearchTree2.Add(7);
+        binarySearchTree2.Add(13);
+        int sum=0;
+        assertEquals(24,binarySearchTree2.oddSum());
+
+    }
 
 }

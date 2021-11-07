@@ -47,9 +47,22 @@ public class BinarySearchTree extends BinaryTree {
     }
 //---------------------------------------
 
+    public int oddSum(){
+        return inOrdeTraverser(this.getRoot());
 
-
-
+    }
+    private int inOrderTree=0;
+    public int inOrdeTraverser(Node node){
+        if (node !=null){
+            inOrdeTraverser(node.getLeft());
+            if ((Integer)node.getValue() %2 !=0){
+                inOrderTree =inOrderTree+ (Integer)node.getValue();
+            }
+            System.out.println(node.getValue());
+            inOrdeTraverser(node.getRight());
+        }
+        return inOrderTree;
+    }
 
 
 

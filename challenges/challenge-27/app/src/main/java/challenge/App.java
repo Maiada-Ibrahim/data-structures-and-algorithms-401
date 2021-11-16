@@ -18,10 +18,21 @@ public class App {
             int mid = n/2;
             int[] left = Arrays.copyOfRange(arr, 0, mid);
             int[] right = Arrays.copyOfRange(arr, mid, n);
+            System.out.println(Arrays.toString(left));
+            System.out.println(Arrays.toString(right));
 
             Mergesort(left);
             Mergesort(right);
+            System.out.println("call");
+            System.out.println(Arrays.toString(arr));
+
             Merge(left,right,arr);
+            System.out.println(Arrays.toString(left));
+            System.out.println(Arrays.toString(right));
+            System.out.println(Arrays.toString(arr));
+
+
+
         }
     }
 

@@ -18,3 +18,4 @@
 |Challenge-17|[ tree-breadth-first](https://github.com/Maiada-Ibrahim/data-structures-and-algorithms-401/tree/main/challenges/challenge-17)|
 |Challenge-18|[ tree-fizz-buzz](https://github.com/Maiada-Ibrahim/data-structures-and-algorithms-401/tree/main/challenges/challenge-18)|
 |Challenge-26|[Insertion Sort](https://github.com/Maiada-Ibrahim/data-structures-and-algorithms-401/tree/main/challenges/challange-26)|
+|Challenge-27|[merge Sort](https://github.com/Maiada-Ibrahim/data-structures-and-algorithms-401/tree/main/challenges/challenge-27)|

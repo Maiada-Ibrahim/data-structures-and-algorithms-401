@@ -44,7 +44,10 @@ sample Array : [8,4,23,42,16,15]
 # Approach & Efficiency
 the call merge function call his self to divide the arrays
 compare two part and put the larger at left
-until we reach to the parts that define the primary array, so time complixity is O(n log n) and space complixity O(1).
+until we reach to the parts that define the primary array, so time Big O for time is O(n log n)
+because divide the array and using looping
+Big O for space is O(n)
+because change the space while looping by change array size
 
 # Solution
 TTo run the server application,

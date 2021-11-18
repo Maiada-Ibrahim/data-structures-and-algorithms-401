@@ -15,16 +15,23 @@ public class App {
 
         public static void QuickSort ( int[] arr, int left, int right){
             if (left < right) {
+
                 int position = Partition(arr, left, right);
-                System.out.println(position);
-                System.out.println("left"+left);
-                System.out.println("right"+right);
-                System.out.println("stop");
+//                System.out.println(position);
+//                System.out.println("left"+left);
+//                System.out.println("right"+right);
+//                System.out.println("stop");
 
                 QuickSort(arr, left, position - 1);
-//                System.out.println(right);
-//                System.out.println(position +1);
+                  System.out.println(position);
+                System.out.println("left"+left);
+                System.out.println("right"+right);
+                System.out.println("stops");
                 QuickSort(arr, position + 1, right);
+//                System.out.println(position);
+//                System.out.println("left"+left);
+//                System.out.println("right"+right);
+//                System.out.println("stopth");
             }
         }
 

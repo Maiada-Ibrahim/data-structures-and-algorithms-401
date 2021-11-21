@@ -8,6 +8,10 @@ import static org.junit.jupiter.api.Assertions.*;
 
 class AppTest {
 
+    @Test void appHasAGreeting() {
+        App classUnderTest = new App();
+//        assertNotNull(classUnderTest.getGreeting(), "app should have a greeting");
+
     @Test void InsertOneAtLast() {
         LinkedList myListTest = new LinkedList<>();
 //        System.out.println(mylist.toString());
@@ -48,6 +52,7 @@ class AppTest {
         String correct=myListTest.toString();
         String expect="{60} -> {70} -> {5} -> {1} -> Null";
         assertEquals (expect,correct);
+
     }
     @Test void insertAfter () {
         LinkedList myListTest = new LinkedList<>();

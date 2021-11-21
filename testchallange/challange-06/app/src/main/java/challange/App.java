@@ -11,6 +11,19 @@ public class App {
     LinkedList<Integer> mylist = new LinkedList<>();
 //        System.out.println(mylist.toString());
         mylist.Insert(1);
+
+//        mylist.insert(5);
+//        mylist.insert(6);
+        mylist.Insert(10);
+        mylist.Insert(3);
+//        System.out.println(mylist.toString());
+
+        mylist.inserlast(66);
+//        mylist.Insert(8);
+//        mylist.Insert(9);
+        mylist.insertbefore(10,77);
+       mylist.insertafter(1,6);
+
         mylist.Insert(5);
         mylist.Insert(70);
 //        System.out.println(mylist.toString());
@@ -18,6 +31,7 @@ public class App {
         mylist.insertBefore(70,60);
 //       mylist.insertAfter(10,6);
 //        mylist.insertAfter(5, 60);
+
         System.out.println(mylist.toString());
 //       System.out.println(mylist.Include(10));
 //        System.out.println(mylist.Include(3));

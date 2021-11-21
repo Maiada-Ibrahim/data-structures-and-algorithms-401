@@ -109,12 +109,43 @@ public T kthfromend( int indexof) {
             break;
         }
         current = current.next;
-    }
-//        System.out.println(index);
-//        System.out.println(indexof);
+    };
 
     return (T) indexValue.value;
 }
+
+
+    public Object findNth( int k) {
+        Node p = head;
+        Node f = head;
+        int count = 1;
+        if (k < 0) {
+            System.out.println("You Can't Add K in Negative Value");
+            return -1;
+        }
+        while (count <= k - 1) {
+            f = f.next;
+            count = count + 1;
+
+        }
+        while (f.next != null) {
+            f = f.next;
+            p = p.next;
+        }
+        return p.value;
+    }
+
+
+
+
+
+
+
+
+
+
+
+
     public int getLength() {
         return length;
     }
@@ -124,22 +155,6 @@ public T kthfromend( int indexof) {
     }
 
 
-//    public  static LinkedList ZipList(LinkedList list1, LinkedList list2){
-// LinkedList ziplinked= new LinkedList();
-// int biggerlist=list1.getLength()>=list2.getLength()?list1.getLength():list2.getLength();
-// System.out.println(list1.getLength());
-// for (int i=1;i<=biggerlist;i++){
-//     if(list1.getLength()-1>=0){
-//         ziplinked.Insert(list1.kthfromend(list1.getLength()-i));
-//     }
-//if(list2.getLength()-1>=0){
-//    ziplinked.Insert(list2.kthfromend(list2.getLength()-i));
-//}
-// }
-//
-//return  ziplinked;
-//
-//
 
     public int size(){
         Node current = this.head;

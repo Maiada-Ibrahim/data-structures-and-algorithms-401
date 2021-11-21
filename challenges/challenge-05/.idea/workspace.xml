@@ -5,12 +5,22 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="bd3604ce-eff7-4286-9130-bbadee738f59" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/../challenge-06/README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../testchallange/challange-06/app/src/main/java/challange/LinkedList.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../testchallange/challange-06/app/src/main/java/challange/Node.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../challenge-30/app/src/main/java/challenge/HashNode.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../challenge-30/app/src/main/java/challenge/HashTable.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/7.2/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.2/executionHistory/executionHistory.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/7.2/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.2/executionHistory/executionHistory.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/7.2/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.2/fileHashes/fileHashes.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/7.2/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.2/fileHashes/fileHashes.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/7.2/fileHashes/resourceHashesCache.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.2/fileHashes/resourceHashesCache.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/test/java/challenge/AppTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/test/java/challenge/AppTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../testchallange/challange-06/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../testchallange/challange-06/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../testchallange/challange-06/app/src/main/java/challange/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../testchallange/challange-06/app/src/main/java/challange/App.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../testchallange/challange-06/app/src/test/java/challange/AppTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../testchallange/challange-06/app/src/test/java/challange/AppTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../testchallange/challange-07/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../testchallange/challange-07/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../testchallange/challange-07/app/src/main/java/challange/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../testchallange/challange-07/app/src/main/java/challange/App.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../testchallange/challange-07/app/src/main/java/challange/LinkedList.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../testchallange/challange-07/app/src/main/java/challange/LinkedList.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

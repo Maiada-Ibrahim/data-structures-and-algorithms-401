@@ -7,11 +7,9 @@ public class LinkedList<T> {
     }
 
     public void Insert(T value) {
-
-
-        Node firstnode = new Node(value);
-        firstnode.next = head;
-        head = firstnode;
+        Node firstNode = new Node(value);
+        firstNode.next = head;
+        head = firstNode;
 
     }
 
@@ -39,40 +37,51 @@ public class LinkedList<T> {
         resulte=resulte+"Null";
         return  resulte;
     }
-    public void insertafter(T thenodeaddafter,T value) {
+    public void insertAfter(T theNodeAddAfter,T value) {
         Node current = head;
         while (current.next != null) {
-          if (current.value.equals(thenodeaddafter)){
-              Node newnode = new Node(value);
-              newnode.next=current.next;
-              current.next=newnode;
+          if (current.value.equals(theNodeAddAfter)){
+              Node newNode = new Node(value);
+              newNode.next=current.next;
+              current.next=newNode;
               break;
           }
             current = current.next;
         }
     }
-    public void inserlast(T value) {
+    public void inserLast(T value) {
+        if (head==null){
+            Insert(value);
+        }else {
         Node current = head;
-        Node newnode = new Node(value);
+        Node newNode = new Node(value);
         while (current.next != null) {
                 current=current.next;
             }
-            current.next = newnode;
+            current.next = newNode;}
         }
-    public void insertbefore(T thenodeaddbefore,T value) {
+    public void insertBefore(T theNodeAddBefore,T value) {
         Node current = head;
         while (current.next != null) {
-            if (current.next.value.equals(thenodeaddbefore)){
-                Node newnode = new Node(value);
-                newnode.next=current.next;
-                current.next=newnode;
+            if (current.next.value.equals(theNodeAddBefore)){
+                Node newNode = new Node(value);
+                newNode.next=current.next;
+                current.next=newNode;
                 break;
+            }
+            else {
+                if (current.value.equals(theNodeAddBefore)){
+                Insert(value);}
+
             }
             current = current.next;
 
 
         }
 
-    }
+
+        }
 
     }
+
+

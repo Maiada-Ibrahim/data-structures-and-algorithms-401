@@ -7,8 +7,73 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 
 class AppTest {
+
     @Test void appHasAGreeting() {
         App classUnderTest = new App();
 //        assertNotNull(classUnderTest.getGreeting(), "app should have a greeting");
+
+    @Test void InsertOneAtLast() {
+        LinkedList myListTest = new LinkedList<>();
+//        System.out.println(mylist.toString());
+        myListTest.inserLast(1);
+        String correct=myListTest.toString();
+        String expect="{1} -> Null";
+        assertEquals (expect,correct);
     }
+    @Test void inserLast () {
+        LinkedList myListTest = new LinkedList<>();
+//        System.out.println(mylist.toString());
+        myListTest.inserLast(1);
+        myListTest.inserLast(5);
+        myListTest.inserLast(70);
+//        myListTest.insertBefore(5, 60);
+        String correct=myListTest.toString();
+        String expect="{1} -> {5} -> {70} -> Null";
+        assertEquals (expect,correct);
+    }
+    @Test void insertBefore () {
+        LinkedList myListTest = new LinkedList<>();
+//        System.out.println(mylist.toString());
+        myListTest.Insert(1);
+        myListTest.Insert(5);
+        myListTest.Insert(70);
+        myListTest.insertBefore(5, 60);
+        String correct=myListTest.toString();
+        String expect="{70} -> {60} -> {5} -> {1} -> Null";
+        assertEquals (expect,correct);
+    }
+    @Test void insertBeforeLastNode () {
+        LinkedList myListTest = new LinkedList<>();
+//        System.out.println(mylist.toString());
+        myListTest.Insert(1);
+        myListTest.Insert(5);
+        myListTest.Insert(70);
+        myListTest.insertBefore(70, 60);
+        String correct=myListTest.toString();
+        String expect="{60} -> {70} -> {5} -> {1} -> Null";
+        assertEquals (expect,correct);
+
+    }
+    @Test void insertAfter () {
+        LinkedList myListTest = new LinkedList<>();
+//        System.out.println(mylist.toString());
+        myListTest.Insert(1);
+        myListTest.Insert(5);
+        myListTest.Insert(70);
+        myListTest.insertAfter(5, 60);
+        String correct=myListTest.toString();
+        String expect="{70} -> {5} -> {60} -> {1} -> Null";
+        assertEquals (expect,correct);
+    }
+    @Test void insertFirst () {
+        LinkedList myListTest = new LinkedList<>();
+//        System.out.println(mylist.toString());
+        myListTest.Insert(1);
+        myListTest.Insert(5);
+        myListTest.Insert(70);
+        String correct=myListTest.toString();
+        String expect="{70} -> {5} -> {1} -> Null";
+        assertEquals (expect,correct);
+    }
+
 }

@@ -3,16 +3,25 @@
  */
 package challenge;
 
+import java.util.Locale;
+
 public class App {
 
 
     public static void main(String[] args) {
          HashTable<String,String> hashTable= new HashTable<>();
+//        HashTable<String,String> hashTable= new HashTable<>();
 
         hashTable.add("Name2","maiada2");
         System.out.println(hashTable.get("Name2"));
         hashTable.add("Name2","maiada1");
         System.out.println(hashTable.get("Name2"));
+        System.out.println(hashTable.repeatedWord(" no file a no data"));
+        System.out.println(hashTable.repeatedWord("hallo are yoelmln kln klnkl klnlk hallo cat ate are a taco"));
+
+
+
+
     }
 
 

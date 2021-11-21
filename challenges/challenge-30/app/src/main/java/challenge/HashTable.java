@@ -1,6 +1,7 @@
 package challenge;
 
 import java.util.ArrayList;
+import java.util.Locale;
 import java.util.Objects;
 
 public class HashTable<K,V> {
@@ -122,7 +123,20 @@ public class HashTable<K,V> {
     }
 
 
+    static String repeatedWord( String data){
+        String [] lineWordList= data.split(" ");
+        HashTable<String,Integer> words= new HashTable<>();
 
+        for (String item: lineWordList){
+            if ( !words.contain(item.toLowerCase(Locale.ROOT))){
+                words.add(item.toLowerCase(Locale.ROOT),1);
+            }else{
+                return item;
+            }
+
+        }
+        return "no repeat word at the sentences";
+    }
 
 
 

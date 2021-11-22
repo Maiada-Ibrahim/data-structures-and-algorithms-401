@@ -1,6 +1,7 @@
 package challenge;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Locale;
 import java.util.Objects;
 
@@ -8,7 +9,9 @@ public class HashTable<K,V> {
     private ArrayList<HashNode<K, V>> bucketArray;
     private int numBuckets;
     private int size;
-
+    private ArrayList<K> traverseArr = new ArrayList<>();
+    private ArrayList<K> keys = new ArrayList<>();
+    private ArrayList<V> values = new ArrayList<>();
 //  -------------------create hash table -------------------
     public HashTable() {
         bucketArray = new ArrayList<>();
@@ -139,7 +142,37 @@ public class HashTable<K,V> {
     }
 
 
+    static ArrayList<String> intersection (BinarySearchTree Tree1, BinarySearchTree Tree2 ){
 
+        String [] Tree1Array= Tree1.inOrder(Tree1.getRoot()).split("-->");
+        String [] Tree2Array= Tree2.inOrder(Tree2.getRoot()).split("-->");
+        System.out.println(Arrays.toString(Tree1Array));
+        System.out.println(Arrays.toString(Tree2Array));
+
+        HashTable<String,Integer> compiles= new HashTable<>();
+
+        ArrayList<String> result = new ArrayList<>();
+
+        for ( String item: Tree1Array){
+            if (! compiles.contain(item)){
+                compiles.add(item,1);
+            }else{
+                compiles.add(item,compiles.get(item)+1);
+            }
+        }
+
+        for ( String i: Tree2Array){
+            if (! compiles.contain(i)){
+                compiles.add(i,1);
+            }else{
+                compiles.add(i,compiles.get(i)+1);
+                result.add(i);
+            }
+        }
+        return  result;
+
+
+    }
 
 
 

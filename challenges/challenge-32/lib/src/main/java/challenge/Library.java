@@ -3,8 +3,21 @@
  */
 package challenge;
 
+import java.util.ArrayList;
+import java.util.Arrays;
+
 public class Library {
     public static void main(String[] args) {
-        System.out.println("hallo");
+
+        BinarySearchTree tree1 = new BinarySearchTree(200);
+        tree1.Add(100);
+        tree1.Add(250);
+
+        BinarySearchTree tree2 = new BinarySearchTree(200);
+        tree2.Add(100);
+        tree2.Add(300);
+        System.out.println(HashTable.intersection(tree1, tree2));
     }
+
+
 }

@@ -7,8 +7,17 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 
 class LibraryTest {
-    @Test void someLibraryMethodReturnsTrue() {
-        Library classUnderTest = new Library();
-        assertTrue(classUnderTest.someLibraryMethod(), "someLibraryMethod should return 'true'");
+    @ Test
+    void intersectionTest(){
+        BinarySearchTree tree1 = new BinarySearchTree(300);
+        tree1.Add(200);
+        tree1.Add(250);
+
+        BinarySearchTree tree2 = new BinarySearchTree(150);
+        tree2.Add(200);
+        tree2.Add(500);
+
+        assertEquals("200", HashTable.intersection(tree1,tree2).get(1));
+
     }
 }

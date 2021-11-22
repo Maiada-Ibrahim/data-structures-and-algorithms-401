@@ -11,8 +11,6 @@ public class LinkedList<T> {
     }
 
     public void Insert(T value) {
-
-
         Node firstnode = new Node(value);
         firstnode.next = head;
         head = firstnode;
@@ -204,4 +202,79 @@ public T kthfromend( int indexof) {
     resulte=resulte+"Null";
     return  resulte;
 }
+
+
+
+
+
+
+
+    public void  palindrome (){
+        Node current = head;
+        Node current2 = head;
+        LinkedList<T> list = new LinkedList<>();
+        int mid ;
+        if(current == null || current.next == null){
+            System.out.println("no Palindrom");
+            return;
+        }
+        int size=1;
+        while(current.getNext() != null){
+            size +=1;
+            current = current.getNext();
+
+        }
+        System.out.println(size);
+        if(size % 2 ==0){
+            mid = size/2;
+
+        }else
+            mid = (size+1)/2;
+        System.out.println(mid);
+        for(int i = 0;i<mid;i++){
+            current2 = current2.next;
+        }
+        while(current2!= null){
+            T value = (T)current2.value;
+            list.Insert(value);
+            current2 = current2.next;
+
+        }
+        current2 = list.head;
+        current=head;
+        System.out.println(list.toString());
+        while(current != null && current2.next!=null){
+
+            if(current.value != current2.value){
+                System.out.println("no Palindrom");
+                return;}
+            current =current.next;
+            current2 = current2.next;
+        }
+        System.out.println("There is Palindrom");
+
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     }

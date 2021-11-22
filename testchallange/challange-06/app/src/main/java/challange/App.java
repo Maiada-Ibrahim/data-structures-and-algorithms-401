@@ -23,6 +23,9 @@ public class App {
         mylist.insertbefore(10,77);
        mylist.insertafter(1,6);
         System.out.println(mylist.toString());
+        mylist.delete(10);
+        System.out.println(mylist.toString());
+
 //       System.out.println(mylist.Include(10));
 //        System.out.println(mylist.Include(3));
 

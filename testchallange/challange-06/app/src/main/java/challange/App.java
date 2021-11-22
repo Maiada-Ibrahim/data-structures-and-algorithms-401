@@ -33,6 +33,9 @@ public class App {
 //        mylist.insertAfter(5, 60);
 
         System.out.println(mylist.toString());
+        mylist.delete(10);
+        System.out.println(mylist.toString());
+
 //       System.out.println(mylist.Include(10));
 //        System.out.println(mylist.Include(3));
 

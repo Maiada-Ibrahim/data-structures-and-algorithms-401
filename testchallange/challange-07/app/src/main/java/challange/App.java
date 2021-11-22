@@ -10,7 +10,6 @@ public class App {
 
     LinkedList<Integer> mylist = new LinkedList<>();
         LinkedList<Integer> mylist2 = new LinkedList<>();
-
 //        System.out.println(mylist.toString());
 //        mylist.Insert(1);
 ////        System.out.println(mylist.toString());
@@ -25,10 +24,14 @@ public class App {
         mylist.Insert(11);
         mylist.Insert(15);
                 System.out.println(mylist.toString());
+        mylist2=mylist;
 
-        System.out.println(mylist.findNth(3));
+//        System.out.println(mylist.findNth(3));
 //        mylist.Insert(66);
-//        mylist2.Insert(8);
+        mylist2.Insert(20);
+        System.out.println(mylist.toString());
+        System.out.println(mylist2.toString());
+       mylist.palindrome();
 //        mylist2.Insert(7);
 //        mylist2.Insert(4);
 //        mylist2.Insert(7);

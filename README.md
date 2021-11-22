@@ -21,3 +21,5 @@
 |Challenge-27|[merge Sort](https://github.com/Maiada-Ibrahim/data-structures-and-algorithms-401/tree/main/challenges/challenge-27)|
 |Challenge-28|[Quick Sort](https://github.com/Maiada-Ibrahim/data-structures-and-algorithms-401/tree/main/challenges/challenge-28)|
 |Challenge-30|[Hash Tables](https://github.com/Maiada-Ibrahim/data-structures-and-algorithms-401/tree/main/challenges/challenge-30)|
+|Challenge-31|[hashmap-repeated-word](https://github.com/Maiada-Ibrahim/data-structures-and-algorithms-401/tree/main/challenges/challenge-31)|
+|Challenge-32|[tree_intersection](https://github.com/Maiada-Ibrahim/data-structures-and-algorithms-401/tree/main/challenges/challenge-32)|

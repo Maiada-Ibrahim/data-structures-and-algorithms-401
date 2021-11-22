@@ -75,13 +75,29 @@ public class LinkedList<T> {
 
             }
             current = current.next;
+        }
+
+
+    }
+    public void delete(T value) {
+        Node current = head;
+        Node help = head;
+        while (current.next != null) {
+            if (current.next.value.equals(value)){
+           help=current.next;
+           current.next=help.next;
+            break;
+        }
+        current = current.next;
+    }
+
 
 
         }
 
 
-        }
 
+    }
     }
 
 

@@ -39,6 +39,7 @@ public String inOrder(Node node){
         inOrderTree +="-->"+node.getValue();
         System.out.println(node.getValue());
         inOrder(node.getRight());
+
     }
     return inOrderTree;
 }

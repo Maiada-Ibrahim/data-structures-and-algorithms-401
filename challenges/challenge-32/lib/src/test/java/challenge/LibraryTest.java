@@ -4,6 +4,9 @@
 package challenge;
 
 import org.junit.jupiter.api.Test;
+
+import java.util.HashMap;
+
 import static org.junit.jupiter.api.Assertions.*;
 
 class LibraryTest {
@@ -18,6 +21,26 @@ class LibraryTest {
         tree2.Add(500);
 
         assertEquals("200", HashTable.intersection(tree1,tree2).get(1));
+
+    }
+    @Test
+    void leftJoinsTest(){
+        HashMap<String,String> map1= new HashMap<>();
+        map1.put("fond","enammored");
+        map1.put("wrath","anger");
+        map1.put("diligent","employed");
+        map1.put("outift","garb");
+        map1.put("guide","usher");
+
+        HashMap<String,String> map2= new HashMap<>();
+        map2.put("fond","averse");
+        map2.put("wrath","delight");
+        map2.put("diligent","idel");
+        map1.put("guide","follow");
+        map1.put("flow","jam");
+
+
+       assertEquals("[[diligent, employed, idel], [wrath, anger, delight], [outift, garb, Null], [guide, follow, Null], [flow, jam, Null], [fond, enammored, averse]]",Library.leftJoins(map1,map2).toString());
 
     }
 }

@@ -23,20 +23,23 @@ public class App {
         mylist.Insert(60);
         mylist.Insert(11);
         mylist.Insert(15);
-                System.out.println(mylist.toString());
-        mylist2=mylist;
+//                System.out.println(mylist.toString());
+//        mylist2=mylist;
 
 //        System.out.println(mylist.findNth(3));
 //        mylist.Insert(66);
-        mylist2.Insert(20);
-        System.out.println(mylist.toString());
-        System.out.println(mylist2.toString());
-       mylist.palindrome();
-//        mylist2.Insert(7);
-//        mylist2.Insert(4);
-//        mylist2.Insert(7);
-//        mylist2.Insert(77);
-//        mylist2.Insert(8);
+//        mylist2.Insert(20);
+//        System.out.println(mylist.toString());
+//        System.out.println(mylist2.toString());
+//       mylist.palindrome();
+        mylist.oddEvenList();
+//        System.out.println(mylist.toString());
+
+        mylist2.Insert(7);
+        mylist2.Insert(4);
+        mylist2.Insert(8);
+        mylist2.Insert(77);
+        mylist2.Insert(11);
 //        mylist.Insert(1);
 //        mylist.Insert(2);
 //        mylist.Insert(3);
@@ -45,8 +48,14 @@ public class App {
 //        mylist2.Insert(22);
 //        System.out.println(mylist.toString());
 //        System.out.println(mylist2.toString());
+//        System.out.println(mylist2.toString());
 
 //        System.out.println(LinkedList.zipLists(mylist,mylist2));
+//        System.out.println(LinkedList.commonNode(mylist.head, mylist2.head).toString());
+//        mylist.sort();
+        System.out.println(mylist.toString());
+        mylist.deleteLast();
+        System.out.println(mylist.toString());
 
 //        mylist.insertbefore(3,77);
 //       mylist.insertafter(10,6);

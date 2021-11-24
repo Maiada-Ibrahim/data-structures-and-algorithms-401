@@ -7,12 +7,9 @@ public class LinkedList<T> {
     }
 
     public void Insert(T value) {
-
-
         Node firstnode = new Node(value);
         firstnode.next = head;
         head = firstnode;
-
     }
 
     public boolean Include(T value) {
@@ -22,7 +19,6 @@ public class LinkedList<T> {
                 return true;
             }
             current = current.next;
-
         }
         return  false;
     }

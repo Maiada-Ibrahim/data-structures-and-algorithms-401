@@ -3,7 +3,7 @@ package challange;
 
 
 
-public class LinkedList<T> {
+public class LinkedList<T>  {
     Node<T> head;
     int length=9;
     public LinkedList() {
@@ -94,24 +94,6 @@ public class LinkedList<T> {
 //
 //        return (index-indexof);
 //    }
-public T kthfromend( int indexof) {
-    Node current = head;
-    Node indexValue=head;
-    int value1 =0;
-    int index =-1;
-
-    while (current != null) {
-     index=index+1;
-        if (index== indexof){
-            indexValue= current;
-            break;
-        }
-        current = current.next;
-    };
-
-    return (T) indexValue.value;
-}
-
 
     public Object findNth( int k) {
         Node p = head;
@@ -222,7 +204,6 @@ public T kthfromend( int indexof) {
         while(current.getNext() != null){
             size +=1;
             current = current.getNext();
-
         }
         System.out.println(size);
         if(size % 2 ==0){
@@ -261,16 +242,101 @@ public T kthfromend( int indexof) {
 
 
 
+    public Node oddEvenList() {
+        if (head == null)
+            return null;
+        Node odd = head, even = head.next, evenHead = even;
+        while (even != null && even.next != null) {
+            odd.next = even.next;
+            odd = odd.next;
+            even.next = odd.next;
+            even = even.next;
+        }
+        odd.next = evenHead;
+        return head;
+    }
+
+    public static LinkedList commonNode(Node head1,Node head2) {
+    Node current1=head1;
+    Node current2=head2;
+    LinkedList list=new LinkedList();
+    LinkedList list2=new LinkedList();
+    Node headnew=null;
+    while (current2!=null){
+        list2.Insert(current2.value);
+        current2=current2.next;
+    }
+        System.out.println(list2.toString());
+while (current1 != null ){
+    System.out.println("k");
+    if (list2.Include(current1.value)){
+        list.Insert(current1.value);
+        System.out.println("l");
+    }
+    current1=current1.next;
+
+}
+headnew=list.head;
+        return list;
+    }
 
 
 
 
 
 
+    public void sort() {
+        Node current = head, index = null;
+        int temp;
+        if(head == null) {
+            return;
+        }
+        else {
+            while(current != null) {
+                //Node index will point to node next to current
+                index = current.next;
+
+                while(index != null) {
+                    //If current node's data is greater than index's node data, swap the data between them
+
+                    if((int)current.value >(int) index.value) {
+                        temp =(int) current.value;
+                        current.value = index.value;
+                        index.value = temp;
+                    }
+                    index = index.next;
+                }
+                current = current.next;
+            }
+        }
+
+    }
 
 
-
-
+    public void delete(T value) {
+        Node current = head;
+        Node help = head;
+        while (current.next != null) {
+            if (current.next.value.equals(value)){
+                help=current.next;
+                current.next=help.next;
+                break;
+            }
+            current = current.next;
+        }
+    }
+    public void deleteLast() {
+        Node current = head;
+        Node help = current.next;
+        while (current.next != null) {
+            if (help.next==null){
+                current.next=help.next;
+                break;
+            }
+            current = current.next;
+            help=help.next;
+        }
+    }
 
 
 

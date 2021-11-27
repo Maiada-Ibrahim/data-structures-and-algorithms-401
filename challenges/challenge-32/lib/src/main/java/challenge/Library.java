@@ -37,6 +37,7 @@ public class Library {
 
 
         System.out.println(leftJoins(map1,map2));
+        System.out.println(HashTable.mostCommon("the bee love bee"));
     }
     public static ArrayList<ArrayList<String>> leftJoins(HashMap<String,String> map1, HashMap<String,String> map2){
         ArrayList<ArrayList<String>> bigContainer= new ArrayList<>();

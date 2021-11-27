@@ -12,7 +12,8 @@ public class HashTable<K,V> {
     private ArrayList<K> traverseArr = new ArrayList<>();
     private ArrayList<K> keys = new ArrayList<>();
     private ArrayList<V> values = new ArrayList<>();
-//  -------------------create hash table -------------------
+
+    //  -------------------create hash table -------------------
     public HashTable() {
         bucketArray = new ArrayList<>();
         numBuckets = 30;
@@ -22,10 +23,12 @@ public class HashTable<K,V> {
             bucketArray.add(null);
         }
     }
-//-------------------hash code function-----------------------------------------------------------
+
+    //-------------------hash code function-----------------------------------------------------------
     private int hashCode(K key) {
         return Objects.hashCode(key);
     }
+
     //----------------function to be in the range--------------------------------------------------------
     private int getBucketIndex(K key) {
         int hashCode = hashCode(key);
@@ -33,6 +36,7 @@ public class HashTable<K,V> {
         index = index < 0 ? index * -1 : index; // convert to possitive
         return index;
     }
+
     //-----------------------------------------------------------------------------------------------
     public void add(K key, V value) {
 
@@ -95,7 +99,8 @@ public class HashTable<K,V> {
         // key not found
         return null;
     }
-//---------------------------------------------------------
+
+    //---------------------------------------------------------
     public int getSize() {
         return size;
     }
@@ -119,21 +124,19 @@ public class HashTable<K,V> {
     }
 
 
-
-
     public int hash(K key) {
         return (Math.abs(key.hashCode())) % bucketArray.size();
     }
 
 
-    static String repeatedWord( String data){
-        String [] lineWordList= data.split(" ");
-        HashTable<String,Integer> words= new HashTable<>();
+    static String repeatedWord(String data) {
+        String[] lineWordList = data.split(" ");
+        HashTable<String, Integer> words = new HashTable<>();
 
-        for (String item: lineWordList){
-            if ( !words.contain(item.toLowerCase(Locale.ROOT))){
-                words.add(item.toLowerCase(Locale.ROOT),1);
-            }else{
+        for (String item : lineWordList) {
+            if (!words.contain(item.toLowerCase(Locale.ROOT))) {
+                words.add(item.toLowerCase(Locale.ROOT), 1);
+            } else {
                 return item;
             }
 
@@ -142,39 +145,71 @@ public class HashTable<K,V> {
     }
 
 
-    static ArrayList<String> intersection (BinarySearchTree Tree1, BinarySearchTree Tree2 ){
+    static ArrayList<String> intersection(BinarySearchTree Tree1, BinarySearchTree Tree2) {
 
-        String [] Tree1Array= Tree1.inOrder(Tree1.getRoot()).split("-->");
-        String [] Tree2Array= Tree2.inOrder(Tree2.getRoot()).split("-->");
+        String[] Tree1Array = Tree1.inOrder(Tree1.getRoot()).split("-->");
+        String[] Tree2Array = Tree2.inOrder(Tree2.getRoot()).split("-->");
         System.out.println(Arrays.toString(Tree1Array));
         System.out.println(Arrays.toString(Tree2Array));
 
-        HashTable<String,Integer> compiles= new HashTable<>();
+        HashTable<String, Integer> compiles = new HashTable<>();
 
         ArrayList<String> result = new ArrayList<>();
 
-        for ( String item: Tree1Array){
-            if (! compiles.contain(item)){
-                compiles.add(item,1);
-            }else{
-                compiles.add(item,compiles.get(item)+1);
+        for (String item : Tree1Array) {
+            if (!compiles.contain(item)) {
+                compiles.add(item, 1);
+            } else {
+                compiles.add(item, compiles.get(item) + 1);
             }
         }
 
-        for ( String i: Tree2Array){
-            if (! compiles.contain(i)){
-                compiles.add(i,1);
-            }else{
-                compiles.add(i,compiles.get(i)+1);
+        for (String i : Tree2Array) {
+            if (!compiles.contain(i)) {
+                compiles.add(i, 1);
+            } else {
+                compiles.add(i, compiles.get(i) + 1);
                 result.add(i);
             }
         }
-        return  result;
+        return result;
 
 
     }
 
+    public static String mostCommon(String inputString) {
+        ArrayList<String> tempWord = new ArrayList<>();
+        Integer count = 0;
+        Integer tempCount = 0;
+
+        String[] splitStr = inputString.toLowerCase().replace(",", "").split(" ");
+        System.out.println(Arrays.toString(splitStr));
+        HashTable<String, Integer> record = new HashTable<>();
+        for (String word : splitStr) {
+            count = record.get(word);
+            if (count == null)
+                record.add(word, 1);
+            else {
+                record.add(word, count + 1);
+                if (tempCount < count) {
+                    tempCount = count;
+                    tempWord = new ArrayList<>();
+                    tempWord.add(word);
+
+                } else if (tempCount.equals((count))) {
+                    tempWord.add(word);
+                }
+            }
 
 
+        }
+for (String word :splitStr){
+    if(tempWord.contains((word))){
+        return word;
+    }
+}
+return null;
+    }
 
 }
+

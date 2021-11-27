@@ -66,7 +66,7 @@ class AppTest {
     }
     @Test
     void repeatWordTest3(){
-        String result= HashTable.repeatedWord("It was a queer, sultry summer the summer they electrocuted the Rosenbergs, and I didn’t know what I was doing in New York..." );
+        String result= HashTable.repeatedWord("It was a queer, sultry summer, the summer they electrocuted the Rosenbergs, and I didn’t know what I was doing in New York..." );
         assertEquals("summer",result);
     }
 }

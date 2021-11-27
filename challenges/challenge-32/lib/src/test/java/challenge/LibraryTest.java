@@ -43,4 +43,10 @@ class LibraryTest {
        assertEquals("[[diligent, employed, idel], [wrath, anger, delight], [outift, garb, Null], [guide, follow, Null], [flow, jam, Null], [fond, enammored, averse]]",Library.leftJoins(map1,map2).toString());
 
     }
+    @Test
+    void common(){
+
+        assertEquals("far",HashTable.mostCommon("In a galaxy far far away"));
+
+    }
 }

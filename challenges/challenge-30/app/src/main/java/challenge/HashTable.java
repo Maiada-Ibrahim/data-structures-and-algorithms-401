@@ -124,7 +124,7 @@ public class HashTable<K,V> {
 
 
     static String repeatedWord( String data){
-        String [] lineWordList= data.split(" ");
+        String [] lineWordList= data.toLowerCase().replace(",", "").split(" ");
         HashTable<String,Integer> words= new HashTable<>();
 
         for (String item: lineWordList){

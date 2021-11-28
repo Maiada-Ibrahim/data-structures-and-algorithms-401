@@ -318,8 +318,9 @@ headnew=list.head;
         Node help = head;
         while (current.next != null) {
             if (current.next.value.equals(value)){
-                help=current.next;
-                current.next=help.next;
+//                help=current.next;
+//                current.next=help.next;
+                current.next=current.next.next;
                 break;
             }
             current = current.next;

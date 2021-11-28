@@ -3,12 +3,51 @@
  */
 package challenge;
 
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 
 class LibraryTest {
-    @Test void someLibraryMethodReturnsTrue() {
-        Library classUnderTest = new Library();
-        assertTrue(classUnderTest.someLibraryMethod(), "someLibraryMethod should return 'true'");
+
+    @Test
+    public void implementTest2() {
+        Graph<String>  graph = new Graph();
+        Vertex<String> vertex1;
+        Vertex<String> vertex2;
+        vertex1 = graph.addNode("Yousef");
+        vertex2 = graph.addNode("Ahmad");
+        graph.addEdge(vertex1,vertex2,5);
+        assertEquals("Yousef:[5] ; Ahmad:[5] ; ", graph.toString());
     }
+    @Test
+    public void test2(){
+        Graph<String>  graph = new Graph();
+        Vertex<String> vertex1;
+        Vertex<String> vertex2;
+        vertex1 = graph.addNode("Yousef");
+        vertex2 = graph.addNode("Ahmad");
+        graph.addEdge(vertex1,vertex2,5);
+        assertEquals("{Vertex{key=Ahmad}=5}", graph.getNeighbors(vertex1).toString());
+    }
+    @Test
+    public void test3(){
+        Graph<String>  graph = new Graph();
+        Vertex<String> vertex1;
+        Vertex<String> vertex2;
+        vertex1 = graph.addNode("Yousef");
+        vertex2 = graph.addNode("Ahmad");
+        graph.addEdge(vertex1,vertex2,5);
+        assertEquals(2, graph.size());
+    }
+    @Test
+    public void test4(){
+        Graph<String>  graph = new Graph();
+        Vertex<String> vertex1;
+        Vertex<String> vertex2;
+//        vertex1 = graph.addNode("Yousef");
+//        vertex2 = graph.addNode("Ahmad");
+//        graph.addEdge(vertex1,vertex2,5);
+        assertEquals(null, graph.size());
+    }
+
 }

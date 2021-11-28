@@ -54,7 +54,7 @@ public class App {
 //        System.out.println(LinkedList.commonNode(mylist.head, mylist2.head).toString());
 //        mylist.sort();
         System.out.println(mylist.toString());
-        mylist.deleteLast();
+        mylist.delete(8);
         System.out.println(mylist.toString());
 
 //        mylist.insertbefore(3,77);

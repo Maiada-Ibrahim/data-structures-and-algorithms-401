@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <projectDescription>
-	<name>challenge-32-lib</name>
+	<name>lib</name>
 	<comment>Project challenge-32-lib created by Buildship.</comment>
 	<projects>
 	</projects>
@@ -22,7 +22,7 @@
 	</natures>
 	<filteredResources>
 		<filter>
-			<id>1638071018596</id>
+			<id>0</id>
 			<name></name>
 			<type>30</type>
 			<matcher>

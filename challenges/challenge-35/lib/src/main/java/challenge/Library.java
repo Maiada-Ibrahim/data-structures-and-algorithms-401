@@ -10,7 +10,7 @@ public class Library {
 
 
     public static void main(String[] args) throws Exception {
-//        Graph<String> graph = new Graph();
+        Graph<String> graph = new Graph();
 //
 //
 //
@@ -29,13 +29,25 @@ public class Library {
 //        System.out.println(graph.getNeighbors(vertex1));
 //        System.out.println(graph.size());
 //        System.out.println(graph.getNodes());
-        Graph<String>  graph = new Graph();
-        Vertex<String> vertex1;
-        Vertex<String> vertex2;
-        vertex1 = graph.addNode("Yousef");
-        vertex2 = graph.addNode("Ahmad");
+
+        //--------------------------------------------------
+//        Graph<String>  graph = new Graph();
+//        Vertex<String> vertex1;
+//        Vertex<String> vertex2;
+//        vertex1 = graph.addNode("Yousef");
+//        vertex2 = graph.addNode("Ahmad");
+//        graph.addEdge(vertex1,vertex2,5);
+//        System.out.println(graph.size());
+        //--------------------------------------------------------
+        Vertex<String> vertex1 = graph.addNode("Yousef");
+        Vertex<String> vertex2 = graph.addNode("Ahmad");
+        Vertex<String> vertex3 = graph.addNode("Hanan");
+        Vertex<String> vertex4 = graph.addNode("Eman");
         graph.addEdge(vertex1,vertex2,5);
-        System.out.println(graph.size());
+        graph.addEdge(vertex1,vertex3,5);
+        graph.addEdge(vertex2,vertex4,5);
+
+        System.out.println(graph.breadthFirstTraverse(vertex1));
 
     }
 }

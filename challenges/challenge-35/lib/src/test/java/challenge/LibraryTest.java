@@ -5,6 +5,10 @@ package challenge;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
+
+import java.util.ArrayList;
+import java.util.Iterator;
+
 import static org.junit.jupiter.api.Assertions.*;
 
 class LibraryTest {
@@ -49,5 +53,18 @@ class LibraryTest {
 //        graph.addEdge(vertex1,vertex2,5);
         assertEquals(null, graph.size());
     }
+        @Test
+public void test5(){
 
+            Graph<String> graph = new Graph();
+
+            Vertex<String> vertex1 = graph.addNode("Yousef");
+            Vertex<String> vertex2 = graph.addNode("Ahmad");
+            Vertex<String> vertex3 = graph.addNode("Hanan");
+            Vertex<String> vertex4 = graph.addNode("Eman");
+            graph.addEdge(vertex1,vertex2,5);
+            graph.addEdge(vertex1,vertex3,5);
+            graph.addEdge(vertex2,vertex4,5);
+            assertEquals("[Vertex{key=Yousef}, Vertex{key=Hanan}, Vertex{key=Ahmad}, Vertex{key=Eman}]", graph.breadthFirstTraverse(vertex1).toString());
+        }
 }

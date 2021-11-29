@@ -24,3 +24,4 @@
 |Challenge-31|[hashmap-repeated-word](https://github.com/Maiada-Ibrahim/data-structures-and-algorithms-401/tree/main/challenges/challenge-31)|
 |Challenge-32|[hashmap-left-join](https://github.com/Maiada-Ibrahim/data-structures-and-algorithms-401/tree/main/challenges/challenge-33)|
 |Challenge-35|[Graph Implementation](https://github.com/Maiada-Ibrahim/data-structures-and-algorithms-401/tree/main/challenges/challenge-35)|
+|Challenge-36|[graph-breadth-first](https://github.com/Maiada-Ibrahim/data-structures-and-algorithms-401/tree/main/challenges/challenge-36)|

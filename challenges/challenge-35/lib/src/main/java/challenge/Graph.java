@@ -110,4 +110,23 @@ if (graphMap.keySet().size()==0){
 //                "graphMap=" + graphMap +
 //                '}';
 //    }
+    //------------------------------cc-36--------------------------
+public Set<Vertex<T>> breadthFirstTraverse(Vertex<T> vertex){
+    Set<Vertex<T>> visited = new LinkedHashSet<>();
+    Queue<Vertex<T>> queue = new LinkedList<>();
+    visited.add(vertex);
+    queue.add(vertex);
+    while (!queue.isEmpty()){
+        Vertex<T> popped = queue.poll();
+        for (Vertex<T> edge:
+                this.graphMap.get(popped).keySet()) {
+            if (!visited.contains(edge)){
+                visited.add(edge);
+                queue.add(edge);
+            }
+        }
+    }
+    return visited;
 }
+}
+

@@ -39,15 +39,26 @@ public class Library {
 //        graph.addEdge(vertex1,vertex2,5);
 //        System.out.println(graph.size());
         //--------------------------------------------------------
-        Vertex<String> vertex1 = graph.addNode("Yousef");
-        Vertex<String> vertex2 = graph.addNode("Ahmad");
-        Vertex<String> vertex3 = graph.addNode("Hanan");
-        Vertex<String> vertex4 = graph.addNode("Eman");
-        graph.addEdge(vertex1,vertex2,5);
-        graph.addEdge(vertex1,vertex3,5);
-        graph.addEdge(vertex2,vertex4,5);
+//        Vertex<String> vertex1 = graph.addNode("Yousef");
+//        Vertex<String> vertex2 = graph.addNode("Ahmad");
+//        Vertex<String> vertex3 = graph.addNode("Hanan");
+//        Vertex<String> vertex4 = graph.addNode("Eman");
+//        graph.addEdge(vertex1,vertex2,5);
+//        graph.addEdge(vertex1,vertex3,5);
+//        graph.addEdge(vertex2,vertex4,5);
+//
+//        System.out.println(graph.breadthFirstTraverse(vertex1));
+        //-------------------------------------------
+//        Graph<String> graph;
+        ArrayList<String> arrayList;
+        graph = new Graph();
+        arrayList = new ArrayList<>();
+        Vertex<String> vertex1 = graph.addNode("Pandora");
+        Vertex<String> vertex2 = graph.addNode("Metro");
+        Vertex<String> vertex3 = graph.addNode("Naboo");
 
-        System.out.println(graph.breadthFirstTraverse(vertex1));
-
+        graph.addEdge(vertex1,vertex2,42);
+        graph.addEdge(vertex2,vertex3,73);
+        System.out.println(graph.depthFirstTraverse(vertex1).toString());
     }
 }

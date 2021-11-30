@@ -128,5 +128,56 @@ public Set<Vertex<T>> breadthFirstTraverse(Vertex<T> vertex){
     }
     return visited;
 }
+//------------------------------cc37
+public boolean contains(Map<Vertex<String>,Integer> map, String data){
+    ArrayList<Vertex<String>> verticesArray = new ArrayList<>();
+    verticesArray.addAll(map.keySet());
+
+    for (Vertex<String> node:
+            verticesArray) {
+        if (node.getKey().equals(data)) return true;
+    }
+    return false;
+}
+public String getTripCost(Graph<String> graph, ArrayList<String> cityNames){
+
+    int i = 1;
+    int sum=0;
+
+    Queue<Vertex<String>> queue = new LinkedList<>();
+    Set<Vertex<String>> graphVertices = graph.getNodes();
+    for (Vertex<String> vertex:
+            graphVertices) {
+        if (vertex.getKey().equals(cityNames.get(0))) {
+            queue.add(vertex);
+            while (!queue.isEmpty()){
+                Vertex<String> popped = queue.poll();
+                Map<Vertex<String>,Integer> edges = graph.getNeighbors(popped);
+                if (contains(edges ,cityNames.get(i))) {
+                    for (Vertex<String> key :
+                            edges.keySet()) {
+                        if (key.getKey().equals(cityNames.get(i))) {
+                            sum += edges.get(key);
+                            queue.add(key);
+                            break;
+                        }
+                    }
+                }else {
+                    return "FALSE, 0";
+                }
+                if (i == cityNames.size()-1) {
+                    break;
+                }else {
+                    i++;
+                }
+            }
+        }
+    }
+    return "TRUE, "+ sum;
+}
+//-------------------------------------------------------------------------------
+
+    
+
 }
 

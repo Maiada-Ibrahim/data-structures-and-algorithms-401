@@ -123,5 +123,22 @@ public void test5(){
 
         assertEquals("FALSE, 0",graph.getTripCost(graph, arrayList));
     }
+    @Test
+    public void depthFirstTraverse(){
+        Graph<String> graph;
+        ArrayList<String> arrayList;
+        graph = new Graph();
+        arrayList = new ArrayList<>();
+        Vertex<String> vertex1 = graph.addNode("Pandora");
+        Vertex<String> vertex2 = graph.addNode("Metro");
+        Vertex<String> vertex3 = graph.addNode("Naboo");
+
+        graph.addEdge(vertex1,vertex2,42);
+        graph.addEdge(vertex2,vertex3,73);
+
+
+
+        assertEquals("[Vertex{key=Pandora}, Vertex{key=Metro}, Vertex{key=Naboo}]",graph.depthFirstTraverse(vertex1).toString());
+    }
     }
 

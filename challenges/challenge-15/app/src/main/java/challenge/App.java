@@ -52,17 +52,17 @@ public class App {
 //      System.out.println(binarySearchTree.oddSum());
 
   //-------------------------------------------------
-            BinaryTree binaryTree1 = new BinaryTree();
+            BinaryTree binaryTree1 = new BinaryTree(10);
     BinaryTree binaryTree2 = new BinaryTree();
 
-    binaryTree1.setRoot(new Node(10));
-    binaryTree1.getRoot().setLeft(new Node(7));
-    binaryTree1.getRoot().setRight(new Node(15));
-    binaryTree1.getRoot().getLeft().setLeft(new Node(4));
-    binaryTree1.getRoot().getLeft().setRight(new Node(9));
-    binaryTree1.getRoot().getRight().setRight(new Node(20));
-    binaryTree1.getRoot().getRight().setLeft(new Node(50));
-
+    binaryTree1.setRoot( 10);
+    binaryTree1.getRoot().setLeft( 7);
+    binaryTree1.getRoot().setRight( 15);
+    binaryTree1.getRoot().getLeft().setLeft(4);
+    binaryTree1.getRoot().getLeft().setRight( 9);
+    binaryTree1.getRoot().getRight().setRight(20);
+    binaryTree1.getRoot().getRight().setLeft(50);
+        System.out.println(binaryTree1.breadthFirst());
     binaryTree2.setRoot(new Node(100));
     binaryTree2.getRoot().setLeft(new Node(70));
     binaryTree2.getRoot().setRight(new Node(150));
@@ -72,12 +72,24 @@ public class App {
     binaryTree2.getRoot().getRight().setLeft(new Node(200));
     binaryTree2.getRoot().getRight().getRight().setRight(new Node(200));
 
-    System.out.println("leaves number 1 " + binaryTree1.getLeafCount(binaryTree1.getRoot()));
-    System.out.println("leaves number 2 " + binaryTree1.getLeafCount(binaryTree2.getRoot()));
-    System.out.println("compare " + binaryTree1.compareTwoTreesLeaves(binaryTree1, binaryTree2));
+//    System.out.println("leaves number 1 " + binaryTree1.getLeafCount(binaryTree1.getRoot()));
+//    System.out.println("leaves number 2 " + binaryTree1.getLeafCount(binaryTree2.getRoot()));
+//    System.out.println("compare " + binaryTree1.compareTwoTreesLeaves(binaryTree1, binaryTree2));
 
     //-----------------------------------------------------------------------------------------------
+        BinaryTree binaryTest= new BinaryTree<Integer>(9);
+        BinaryTree binaryTest2= new BinaryTree<Integer>(9);
 
+        binaryTest.getRoot().setLeft(4);
+        binaryTest2.getRoot().setRight(4);
+        binaryTest.getRoot().setRight(6);
+        binaryTest2.getRoot().setLeft(6);
+
+//        binaryTest.getRoot().getLeft().setRight(3);
+//        binaryTest2.getRoot().getRight().setLeft(3);
+
+//        System.out.println(BinaryTree.mirror(binaryTest2, binaryTest));
+        System.out.println(BinaryTree.maxDepth2(binaryTest.getRoot()));
 
     }
 }

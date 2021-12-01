@@ -58,7 +58,7 @@ public class BinarySearchTree extends BinaryTree {
             if ((Integer)node.getValue() %2 !=0){
                 inOrderTree =inOrderTree+ (Integer)node.getValue();
             }
-            System.out.println(node.getValue());
+//            System.out.println(node.getValue());
             inOrdeTraverser(node.getRight());
         }
         return inOrderTree;

@@ -107,5 +107,17 @@ class AppTest {
         assertEquals(24,binarySearchTree2.oddSum());
 
     }
+    @Test
 
+   public void mirror(){
+        BinaryTree binaryTest= new BinaryTree<Integer>(9);
+        BinaryTree binaryTest2= new BinaryTree<Integer>(9);
+
+        binaryTest.getRoot().setLeft(4);
+        binaryTest2.getRoot().setRight(4);
+        binaryTest.getRoot().setRight(6);
+        binaryTest2.getRoot().setLeft(6);
+        assertEquals(true,BinaryTree.mirror(binaryTest, binaryTest2));
+
+    }
 }

@@ -23,7 +23,7 @@ public class BinaryTree<T> {
     }
     public String preOrder(Node node){
         if (node != null){
-            System.out.println(node.getValue());
+//            System.out.println(node.getValue());
             preOrderTree +="-->"+node.getValue();
             preOrder(node.getLeft());
             preOrder(node.getRight());
@@ -37,7 +37,6 @@ public String inOrder(Node node){
     if (node != null){
         inOrder(node.getLeft());
         inOrderTree +="-->"+node.getValue();
-        System.out.println(node.getValue());
         inOrder(node.getRight());
     }
     return inOrderTree;
@@ -61,7 +60,7 @@ public String inOrder(Node node){
     }
 public int Max(Node<Integer> current) throws NullPointerException{
     int maxValue= (Integer) root.getValue();
-    System.out.println(current.getLeft());
+
         if (current.getLeft() != null){
             if (current.getLeft().getValue()>maxValue){
                 maxValue=current.getLeft().getValue();
@@ -164,4 +163,30 @@ public int getLeafCount(Node node) {
     public void setPostOrderTree(String postOrderTree) {
         PostOrderTree = postOrderTree;
     }
+//-----------------------------------------
+public static boolean mirror(BinaryTree tree1,BinaryTree tree2){
+ return helper(tree1.getRoot(),tree2.getRoot());
 }
+    private static boolean helper (Node a,Node b){
+        if (a == null && b == null)
+            return true;
+
+        if (a != null && b != null)
+        {
+            return
+                    (
+                            a.getValue() == b.getValue() &&
+                                    helper(a.getLeft(), b.getRight()) &&
+                                    helper(a.getRight(), b.getLeft())
+                    );
+        }
+
+        return false;
+
+    }
+    public static int  maxDepth2(Node root){
+        return root == null? 0:Math.max(maxDepth2(root.getLeft()), maxDepth2(root.getRight())) + 1;
+    }
+
+}
+

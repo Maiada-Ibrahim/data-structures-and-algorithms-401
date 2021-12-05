@@ -1,9 +1,9 @@
 package challenge;
 
 public class Node<T> {
-    private T value;
-    private Node<T> left;
-    private Node<T> right;
+     T value;
+     Node<T> left;
+     Node<T> right;
     public Node() {
 
     }
@@ -23,7 +23,7 @@ public class Node<T> {
     public Node<T> getLeft() {
         return left;
     }
-
+//
     public void setLeft(T value) {
         Node<T> left= new Node<>(value);
         this.left = left;
@@ -38,6 +38,14 @@ public class Node<T> {
         this.right = right;
     }
 
+    public void setLeft(Node<T> left) {
+        this.left = left;
+    }
+
+    public void setRight(Node<T> right) {
+        this.right = right;
+    }
+
     @Override
     public String toString() {
         return "Node{" +
@@ -46,4 +54,7 @@ public class Node<T> {
                 ", right=" + right +
                 '}';
     }
+
+
+
 }

@@ -49,22 +49,80 @@ public class BinarySearchTree extends BinaryTree {
 
     public int oddSum(){
         return inOrdeTraverser(this.getRoot());
-
     }
     private int inOrderTree=0;
     public int inOrdeTraverser(Node node){
         if (node !=null){
-            inOrdeTraverser(node.getLeft());
             if ((Integer)node.getValue() %2 !=0){
                 inOrderTree =inOrderTree+ (Integer)node.getValue();
             }
-//            System.out.println(node.getValue());
+            inOrdeTraverser(node.getLeft());
             inOrdeTraverser(node.getRight());
         }
         return inOrderTree;
     }
 
+//--------------------------------------
+public Node sortedArrayToBST(int[] nums) {
+    return helper(nums, 0, nums.length - 1);
+}
 
+    public Node helper(int[] nums, int left, int right) {
+        if(left > right) return null;
+
+        int m = left + (right - left) / 2;
+        Node root = new Node(nums[m]);
+        root.left = helper(nums, left, m - 1);
+        root.right = helper(nums, m + 1, right);
+        return root;
+    }
+
+//--------------------------------
+    private Integer maxValue(Node<Integer> node) {
+
+        if(node.right != null) {
+            return maxValue(node.right);
+        }
+        return node.value;
+    }
+
+    static int min1;
+    static int min2;
+    public static int findSecond(BinaryTree tree){
+        min1 = (int) tree.getRoot().getValue();
+        min2 = (int) tree.getRoot().getValue();
+        dfs(tree.getRoot());
+//        dfs2(tree.getRoot());
+        return min2;
+    }
+    public static void dfs(Node root) {
+        if (root != null) {
+            if (min1 > (int) root.getValue()) {
+                min1 = (int) root.getValue();
+            }
+            dfs(root.getLeft());
+            if(min2 > (int) root.getValue() && (int) root.getValue() >min1 ) {
+                min2 = (int) root.getValue();
+            }
+//            dfs(root.getRight());
+//            if(min2 > (int) root.getValue() && (int) root.getValue() >min1 ) {
+//                min2 = (int) root.getValue();
+//            }
+        }
+    }
+//-------------------------------------------------------
+boolean isBST(Node<Integer> node)
+{
+    if (node == null)
+        return true;
+
+    if (node.left != null && node.left.value > node.value)
+        return false;
+
+    if (node.right != null && node.right.value < node.value)
+        return false;
+    return     (isBST(node.left) && isBST(node.right) );
+}
 
 
 

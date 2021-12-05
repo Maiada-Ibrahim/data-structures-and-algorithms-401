@@ -14,10 +14,10 @@ public class App {
 //        Node<Integer> root1=new Node<Integer>(20);
 
 
-//        BinaryTree<Integer> pre = new BinaryTree<Integer>(5);
+//        BinaryTree<Integer> pre = new BinaryTree<Integer>(20);
 //        pre.getRoot().setLeft(8);
 //        pre.getRoot().setRight(6);
-//        pre.getRoot().setRight(10);
+//        pre.getRoot().setRight(3);
 //        pre.getRoot().setLeft(99);
 
 //-----------------------cc-17--------------------------------------------------
@@ -35,9 +35,9 @@ public class App {
 //        System.out.println(pre.getRoot().getRight().getValue());
 //        BinarySearchTree binarySearchTree= new BinarySearchTree(3);
 //        BinaryTree<Integer> pre = new BinaryTree<Integer>(binarySearchTree);
-//        binarySearchTree.Add(2);
+//        binarySearchTree.Add(6);
 //        binarySearchTree.Add(7);
-//        binarySearchTree.Add(8);
+//        binarySearchTree.Add(1);
 //System.out.println(binarySearchTree.inOrder(binarySearchTree.getRoot()));
 //System.out.println(binarySearchTree.PostOrder(binarySearchTree.getRoot()));
 //System.out.println(binarySearchTree.preOrder(binarySearchTree.getRoot()));
@@ -45,51 +45,84 @@ public class App {
 
 //        System.out.println(pre.max());
 //--------------------------------------------------------------
-//        BinarySearchTree binarySearchTree= new BinarySearchTree(3);
-//        binarySearchTree.Add(2);
-//        binarySearchTree.Add(7);
-//        binarySearchTree.Add(7);
+        BinarySearchTree binarySearchTree= new BinarySearchTree(3);
+        binarySearchTree.Add(2);
+        binarySearchTree.Add(5);
+        binarySearchTree.Add(9);
 //      System.out.println(binarySearchTree.oddSum());
 
   //-------------------------------------------------
-            BinaryTree binaryTree1 = new BinaryTree(10);
-    BinaryTree binaryTree2 = new BinaryTree();
+            BinaryTree binaryTree1 = new BinaryTree(5);
+//    BinaryTree binaryTree2 = new BinaryTree();
 
-    binaryTree1.setRoot( 10);
-    binaryTree1.getRoot().setLeft( 7);
-    binaryTree1.getRoot().setRight( 15);
-    binaryTree1.getRoot().getLeft().setLeft(4);
-    binaryTree1.getRoot().getLeft().setRight( 9);
-    binaryTree1.getRoot().getRight().setRight(20);
-    binaryTree1.getRoot().getRight().setLeft(50);
-        System.out.println(binaryTree1.breadthFirst());
-    binaryTree2.setRoot(new Node(100));
-    binaryTree2.getRoot().setLeft(new Node(70));
-    binaryTree2.getRoot().setRight(new Node(150));
-    binaryTree2.getRoot().getLeft().setLeft(new Node(40));
-    binaryTree2.getRoot().getLeft().setRight(new Node(90));
-    binaryTree2.getRoot().getRight().setRight(new Node(200));
-    binaryTree2.getRoot().getRight().setLeft(new Node(200));
-    binaryTree2.getRoot().getRight().getRight().setRight(new Node(200));
+//
+    binaryTree1.getRoot().setLeft(1);
+    binaryTree1.getRoot().setRight(1);
+    binaryTree1.getRoot().getRight().setRight(6);
+    binaryTree1.getRoot().getLeft().setRight(4);
+    binaryTree1.getRoot().getRight().setLeft(3);
+//    binaryTree1.getRoot().getLeft().setLeft(40);
+//    binaryTree1.getRoot().getLeft().setRight( 1);
+
+
+//        System.out.println(binaryTree1.breadthFirst());
+//    binaryTree2.setRoot(new Node(100));
+//    binaryTree2.getRoot().setLeft(new Node(70));
+//    binaryTree2.getRoot().setRight(new Node(150));
+//    binaryTree2.getRoot().getLeft().setLeft(new Node(40));
+//    binaryTree2.getRoot().getLeft().setRight(new Node(90));
+//    binaryTree2.getRoot().getRight().setRight(new Node(200));
+//    binaryTree2.getRoot().getRight().setLeft(new Node(200));
+//    binaryTree2.getRoot().getRight().getRight().setRight(new Node(200));
 
 //    System.out.println("leaves number 1 " + binaryTree1.getLeafCount(binaryTree1.getRoot()));
 //    System.out.println("leaves number 2 " + binaryTree1.getLeafCount(binaryTree2.getRoot()));
 //    System.out.println("compare " + binaryTree1.compareTwoTreesLeaves(binaryTree1, binaryTree2));
 
     //-----------------------------------------------------------------------------------------------
-        BinaryTree binaryTest= new BinaryTree<Integer>(9);
-        BinaryTree binaryTest2= new BinaryTree<Integer>(9);
+//        BinaryTree binaryTest= new BinaryTree<Integer>(9);
+//        BinaryTree binaryTest2= new BinaryTree<Integer>(9);
 
-        binaryTest.getRoot().setLeft(4);
-        binaryTest2.getRoot().setRight(4);
-        binaryTest.getRoot().setRight(6);
-        binaryTest2.getRoot().setLeft(6);
+//        binaryTest.getRoot().setLeft(new Node(2));
+//        binaryTest.getRoot().getLeft().setLeft(new Node<>(4));
+//        binaryTest.getRoot().getLeft().setRight(new Node<>(5));
+//        binaryTest.getRoot().setRight(new Node(3));
+//        binaryTest.getRoot().getLeft().setLeft(new Node<>(8));
+//        binaryTest2.getRoot().setRight(new Node(4));
+
+//        binaryTest.getRoot().getRight().setRight(new Node<>(4));
+//        binaryTest2.getRoot().getRight().setRight(new Node<>(8));
+//        binaryTest.getRoot().getRight().setLeft(new Node<>(6));
+
+//        System.out.println(binarySearchTree.findSecond(binarySearchTree));
+//        System.out.println(binarySearchTree.PostOrder(binarySearchTree.getRoot()));
+
+//        binaryTest2.getRoot().setLeft(6);
 
 //        binaryTest.getRoot().getLeft().setRight(3);
 //        binaryTest2.getRoot().getRight().setLeft(3);
 
 //        System.out.println(BinaryTree.mirror(binaryTest2, binaryTest));
-        System.out.println(BinaryTree.maxDepth2(binaryTest.getRoot()));
+//        binaryTest.PostOrder(binaryTest.getRoot());
+//        BinaryTree.reverse(binaryTest);
+//        binaryTest.PostOrder(binaryTest.getRoot());
+//        System.out.println(BinaryTree.pruneTree(binaryTest.getRoot()));
+//        binaryTest.PostOrder(binaryTest.getRoot());
+//        System.out.println(BinaryTree.isUnivalTree(binaryTest.getRoot()));
+//int num =BinaryTree.countNodes(binaryTest.getRoot());
+//        System.out.println(num);
+//        System.out.println(BinaryTree.countNodes(binaryTest.getRoot()));
+//        System.out.println(BinaryTree.minimumDepth(binaryTest.getRoot()));
+//        System.out.println(binaryTest.minimumDepth());
+//        BinaryTree.dfs(binaryTest.getRoot());
 
+//        System.out.println(BinaryTree.MergeTrees(binaryTest.getRoot(),binaryTest2.getRoot()));
+//        binaryTest.PostOrder(binaryTest.getRoot());
+//       BinaryTree.dfs(binaryTest.getRoot());
+//       binaryTest.PostOrder(binaryTest.getRoot());
+//        System.out.println(BinaryTree.findSecond(binaryTest));
+//      binaryTree1.printGivenLevel(binaryTree1.root,binaryTree1.root.right.right,3);
+//        System.out.println(BinaryTree.sumAllFunc(binaryTree1.getRoot()));
+        System.out.println(BinaryTree.countDuplicates(binaryTree1.root,new Node(null)));
     }
 }

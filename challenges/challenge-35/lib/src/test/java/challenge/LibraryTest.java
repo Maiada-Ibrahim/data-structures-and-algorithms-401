@@ -65,7 +65,7 @@ public void test5(){
             graph.addEdge(vertex1,vertex2,5);
             graph.addEdge(vertex1,vertex3,5);
             graph.addEdge(vertex2,vertex4,5);
-            assertEquals("[Vertex{key=Yousef}, Vertex{key=Hanan}, Vertex{key=Ahmad}, Vertex{key=Eman}]", graph.breadthFirstTraverse(vertex1).toString());
+            assertEquals("[Vertex{key=Yousef}, Vertex{key=Hanan}, Vertex{key=Ahmad}, Vertex{key=Eman}]", graph.depthFirstTraverse(vertex1).toString());
         }
     @Test
    public void directTripCost() {
@@ -138,7 +138,7 @@ public void test5(){
 
 
 
-        assertEquals("[Vertex{key=Pandora}, Vertex{key=Metro}, Vertex{key=Naboo}]",graph.depthFirstTraverse(vertex1).toString());
+        assertEquals("[Vertex{key=Pandora}, Vertex{key=Metro}, Vertex{key=Naboo}]",graph.breadthFirstTraverse(vertex1).toString());
     }
     }
 

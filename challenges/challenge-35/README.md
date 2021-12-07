@@ -15,10 +15,12 @@ Implement your own Graph. The graph should be represented as an adjacency list, 
 - size
 
 ## Approach & Efficiency
-- addNode: Time complexity O(1), space complexity O(n).
-- addEdge: Time complexity O(1), space complexity O(1).
-- getNodes: Time complexity O(n), space complexity O(1).
-- getNeighbors: Time complexity O(1), space complexity O(1).
+- addNode: Time complexity O(1) no looping , space complexity O(n) change space take more to add at graph
+- addEdge: Time complexity O(1) no looping , space complexity O(1) no change at space we add edge btween two node we added before 
+- getNodes: Time complexity O(n) loop at Neighbors, space complexity O(1) no change at space.
+- getNeighbors: Time complexity O(1) get all Neighbors for spicfic node so no looping  , space complexity O(1) no change at space.
+size: Time complexity: O(n) loop at Neighbors  , Space complexity -> O(1) no change at space.
+
 ## API
 - addNode Arguments: value Returns: The added node Add a node to the graph
 

@@ -97,12 +97,12 @@ public Node sortedArrayToBST(int[] nums) {
     }
     public static void dfs(Node root) {
         if (root != null) {
-            if (min1 > (int) root.getValue()) {
-                min1 = (int) root.getValue();
+            if (min1 > (int) root.value) {
+                min1 = (int) root.value;
             }
             dfs(root.getLeft());
-            if(min2 > (int) root.getValue() && (int) root.getValue() >min1 ) {
-                min2 = (int) root.getValue();
+            if(min2 > (int) root.value && (int) root.getValue() >min1 ) {
+                min2 = (int) root.value;
             }
 //            dfs(root.getRight());
 //            if(min2 > (int) root.getValue() && (int) root.getValue() >min1 ) {

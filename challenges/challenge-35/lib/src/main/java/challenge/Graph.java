@@ -103,13 +103,6 @@ if (graphMap.keySet().size()==0){
         return stringBuilder.toString();
     }
 
-
-//    @Override
-//    public String toString() {
-//        return "Graph{" +
-//                "graphMap=" + graphMap +
-//                '}';
-//    }
     //------------------------------cc-36--------------------------
 public Set<Vertex<T>> breadthFirstTraverse(Vertex<T> vertex){
     Set<Vertex<T>> visited = new LinkedHashSet<>();
@@ -118,8 +111,7 @@ public Set<Vertex<T>> breadthFirstTraverse(Vertex<T> vertex){
     queue.add(vertex);
     while (!queue.isEmpty()){
         Vertex<T> popped = queue.poll();
-        for (Vertex<T> edge:
-                this.graphMap.get(popped).keySet()) {
+        for (Vertex<T> edge: this.graphMap.get(popped).keySet()) {
             if (!visited.contains(edge)){
                 visited.add(edge);
                 queue.add(edge);
@@ -175,9 +167,22 @@ public String getTripCost(Graph<String> graph, ArrayList<String> cityNames){
     }
     return "TRUE, "+ sum;
 }
-//-------------------------------------------------------------------------------
+//-----------------------------------cc-38--------------------------------------------
 
-    
+    public Set<Vertex<T>> depthFirstTraverse(Vertex<T> vertex){
+        Set<Vertex<T>> visited = new LinkedHashSet<>();
+        Stack<Vertex<T>> stack = new Stack<>();
+        stack.add(vertex);
+        while (!stack.isEmpty()){ Vertex<T> popped= stack.pop();
+            if (!visited.contains(popped)){
+                visited.add(popped);
+                for (Vertex<T> edge: this.graphMap.get(popped).keySet()) {
+                    stack.add(edge);
+                }
+            }
+        }
+        return visited;
+    }
 
 }
 

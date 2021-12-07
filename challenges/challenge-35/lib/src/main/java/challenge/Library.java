@@ -56,9 +56,14 @@ public class Library {
         Vertex<String> vertex1 = graph.addNode("Pandora");
         Vertex<String> vertex2 = graph.addNode("Metro");
         Vertex<String> vertex3 = graph.addNode("Naboo");
+        Vertex<String> vertex4 = graph.addNode("boo");
 
         graph.addEdge(vertex1,vertex2,42);
         graph.addEdge(vertex2,vertex3,73);
-        System.out.println(graph.depthFirstTraverse(vertex1).toString());
+        graph.addEdge(vertex2,vertex4,73);
+
+        System.out.println(graph.breadthFirstTraverse(vertex1));
+        System.out.println(graph.depthFirstTraverse(vertex1));
+
     }
 }

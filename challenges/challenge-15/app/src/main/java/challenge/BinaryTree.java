@@ -461,8 +461,8 @@ static int sumleaf;
     }
     public static void dfs(Node root) {
         if (root != null) {
-            if (min1 > (int) root.getValue()) {
-                min1 = (int) root.getValue();
+            if (min1 > (int) root.value) {
+                min1 = (int) root.value;
             }
             dfs(root.getLeft());
             if(min2 > (int) root.getValue() && (int) root.getValue() >min1 ) {
